@@ -1,0 +1,39 @@
+﻿@model List<Team>
+@{
+    Layout = null;
+}
+
+<section id="lawyer-team">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Our Lawyer Team</h2>
+                <div class="h2-border3"></div>
+            </div>
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 js-scroll slide-right">
+                    <div class="photo-content-cont">
+                        <div class="inner-cont">
+                            <div class="inner-overlay">
+                                <img src="~/dist/img/@item.Img" alt="">
+                                <div class="icon-cont">
+                                    <div class="inner-icon">
+                                        @foreach (var item2 in item.TeamToSocials)
+                                        {
+                                            <a href="@item2.Link"><i class="@item2.TeamSocial.Icon"></i></a>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h4>@item.Name</h4>
+                        <p>
+                            @item.Position.Name
+                        </p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

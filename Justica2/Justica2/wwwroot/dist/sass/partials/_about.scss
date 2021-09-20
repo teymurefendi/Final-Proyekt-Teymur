@@ -1,0 +1,275 @@
+main{
+    #partner{
+        background-color: rgb(255, 255, 255);
+        background-size: cover;
+        padding: 90px 0 90px 0;
+        position: relative;
+        .container{
+            .row{
+                align-items: center;
+                .col-md-5{
+                    span{
+                        color: rgb(255, 174, 0);
+                        font-size: 12px;
+                        margin-bottom: 20px;
+                        font-weight: bold;
+                        letter-spacing: 2px;
+                        line-height: 10px;
+                        text-transform: uppercase;
+                        display: inline-block;
+                        font-family: "Jost";
+                    }
+                    h2{
+                        display: inline-block;
+                        overflow: hidden;
+                        position: relative;
+                        left: 0;
+                        right: 0;
+                        margin-bottom: 10px;
+                        font-size: 36px;
+                        line-height: 42px;
+                        letter-spacing: -1px;
+                        font-family: "Jost";
+                        font-weight: 600;
+                        color: #111111;
+                    }
+                    p{
+                        margin-bottom: 20px;
+                        font-family: "Jost";
+                        font-size: 15px;
+                        font-weight: 400;
+                        color: #606060;
+                        line-height: 28px;
+                    }
+                }
+                .col-md-6{
+                    .img-cont{
+                        position: relative;
+                        width: 100%;
+                        .added-text-cont{
+                            background: rgb(255, 174, 0);
+                            position: absolute;
+                            width: 40%;
+                            top: 40%;
+                            left: -10%;
+                            z-index: 1;
+                            text-align: center;
+                            padding: 10% 0;
+                            box-shadow: 2px 20px 30px 0px rgba(20, 20, 20, 0.3);
+                            border-radius: 2px;
+                            h1{
+                                color: #fff;
+                                line-height: 56px;
+                                letter-spacing: -1px;
+                                font-size: 4vw;
+                                font-family: "Jost";
+                                font-weight: 600;
+                            }
+                            span{
+                                text-align: center;
+                                color: white;
+                                font-family: "Jost";
+                                font-size: 15px;
+                                font-weight: 400;
+                                line-height: 28px;
+                            }
+                        }
+                        .small-img{
+                            border-radius: 2px;
+                            box-shadow: 2px 20px 30px 0px rgba(20, 20, 20, 0.3);
+                            position: absolute;
+                            width: 40%;
+                            height: 40%;
+                            right: -10%;
+                            bottom: -10%;
+                            z-index: 1;
+                        }
+                        .big-img{
+                            border-radius: 2px;
+                            box-shadow: 2px 20px 30px 0px rgba(20, 20, 20, 0.3);
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #years{
+        background-color: rgb(17, 17, 17);
+        background-size: cover;
+        padding: 90px 0 90px 0;
+        position: relative;
+        .container{
+            .row{
+                align-items: center;
+                .col-lg-4{
+                    .count-twenty{
+                        border: solid 2px #333333;
+                        padding: 30px;
+                        text-align: center;
+                        h3{
+                            font-size: 180px;
+                            line-height: 1em;
+                            color: white;
+                            margin-bottom: 15px;
+                            font-family: "Jost";
+                            font-weight: 600;
+                        }
+                        span{
+                            font-size: 14px;
+                            letter-spacing: 5px;
+                            font-weight: bold;
+                            padding: 5px 10px;
+                            text-transform: uppercase;
+                            color: rgb(255, 174, 0);
+                        }                       
+                    }
+                    #title-well{
+                        color: rgb(255, 174, 0);
+                        font-size: 12px;
+                        margin-bottom: 20px;
+                        font-weight: bold;
+                        letter-spacing: 2px;
+                        line-height: 10px;
+                        text-transform: uppercase;
+                        display: inline-block;
+                    }
+                    h2{
+                         color: white;
+                         display: inline-block;
+                         overflow: hidden;
+                         position: relative;
+                         left: 0;
+                         right: 0;
+                         margin-bottom: 10px;
+                         font-size: 36px;
+                         line-height: 42px;
+                         letter-spacing: -1px;
+                         font-family: "Jost";
+                         font-weight: 600;
+                    }
+                    p{
+                        margin-bottom: 20px;
+                        color: white;
+                        font-family: "Jost";
+                        font-size: 15px;
+                        font-weight: 400;
+                        line-height: 1.8em;
+                    }
+                }
+            }
+        }
+    }
+    #investigation{
+        padding: 90px 0 90px 0;
+        position: relative;
+        .container{
+            .row{
+                .col-lg-4{
+                    .custom-box{
+                        padding: 50px;
+                        background: #f8f8f8;
+                        position: relative;
+                        overflow: hidden;
+                        text-align: center;
+                        transition: all 0.3s linear;
+                        &:hover{
+                            background-color: rgb(255, 174, 0);
+                            .little-i{
+                                color: white;
+                            }
+                            .cust-text{
+                                h4{
+                                    color: white;
+                                }
+                                p{
+                                    color: white;
+                                }
+                            }  
+                            .big-i{
+                                transform: rotate(-25deg);
+                            }                       
+                        }
+                        .little-i{
+                            text-align: center;
+                            font-size: 40px;
+                            padding: 14px 0;
+                            width: 56px;
+                            height: 56px;
+                            margin-bottom: 20px;
+                            color: rgb(255, 174, 0);
+                            transition: all 0.3s linear;
+                        }
+                        .cust-text{
+                            text-align: center;
+                             h4{
+                                font-size: 20px;
+                                margin-bottom: 10px;
+                                font-family: "Jost";
+                                font-weight: 600;
+                                color: #111111;
+                                transition: all 0.3s linear;
+                             }
+                             p{
+                                font-family: "Jost";
+                                font-size: 15px;
+                                font-weight: 400;
+                                color: #606060;                               
+                                line-height: 28px;
+                                transition: all 0.3s linear;
+                             }
+                        }
+                        .big-i{
+                            position: absolute;
+                            font-size: 200px;
+                            background: none;
+                            width: auto;
+                            height: auto;
+                            color: rgba(0, 0, 0, .1);
+                            right: 0;
+                            top: 35%;
+                            padding: 14px 0;
+                            transition: all 0.4s linear;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width:767px) {
+    #partner{       
+        .container{
+            .row{
+                .col-md-6{
+                    .img-cont{
+                        .added-text-cont{
+                             left: 5% !important;
+                             top: 60% !important;
+                        }
+                        .small-img{
+                            right: 5% !important;
+                            width: 30% !important;
+                            height: 30% !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #investigation{
+        padding: 90px 0 90px 0;
+        position: relative;
+        .container{
+            .row{
+                .col-lg-4{
+                    .custom-box{
+                        margin-bottom: 20px !important;                       
+                    }
+                }
+            }
+        }
+    }
+}
+

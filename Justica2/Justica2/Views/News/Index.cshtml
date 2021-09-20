@@ -1,0 +1,69 @@
+﻿@model VmNews
+@{
+    ViewData["Title"] = "Index";
+    int firstRow = (int)((ViewBag.CurrentPage - 1) * ViewBag.DataPage);
+}
+
+@await Component.InvokeAsync("VcSubheader", new { PageName = "News" })
+<section id="latest-news">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Latest News</h2>
+                <div class="h2-border3"></div>
+            </div>
+            @{ int k = 1;}
+            @foreach (var item in Model.News2)
+            {
+                <div class="col-lg-4 col-md-6 @(k%3==0 ? "hidden-md":"")">
+                    <div class="news-item">
+                        <div class="item-content">
+                            <div class="item-date">
+                                <span class="news-day">@item.CreatedDAte.Day</span>
+                                <span class="news-month">@item.CreatedDAte.ToString("MMM")</span>
+                            </div>
+                            <div class="item-img">
+                                <img src="~/dist/img/@item.Img" alt="">
+                            </div>
+                            <div class="item-text">
+                                <span class="news-tag">Law Firm</span>
+                                <h4>
+                                    @foreach (var item2 in item.NewsNames)
+                                    {
+                                        <a class="home-a-dif @(ViewBag.Active=="News"?"active":"")" asp-controller="NewsDetail" asp-action="Index" asp-route-Id="@item2.Id">@item2.Name</a>
+                                    }
+                                </h4>
+                                <p>@item.Text1.Substring(0, 124)</p>
+                                <span class="news-author">@item.Author</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                if (k % 3 == 0)
+                {
+                    <div class="bosluq" style="margin-top: 30px;"></div>
+                }
+                k++;
+            }
+        <ul id="pagination">
+            <li><a asp-controller="News" asp-action="index" asp-route-page="@(ViewBag.CurrentPage<=1?1: ViewBag.CurrentPage - 1)">Prev</a></li>
+            @*@if (ViewBag.CurrentPage >= 2)
+            {
+                <li><a asp-controller="News" asp-action="index" asp-route-page="@ViewBag.CurrentPage - 1">@(ViewBag.CurrentPage - 1)</a></li>
+            }*@
+            @for (int j = 1; j <= ViewBag.PageCount; j++)
+            {
+                <li><a class="@(j==ViewBag.CurrentPage ?"active":"")" asp-controller="News" asp-action="index" asp-route-page="@j">@j</a></li>
+            }
+            @*@if (ViewBag.CurrentPage <= ViewBag.PageCount - 1)
+            {
+                <li><a asp-controller="News" asp-action="index" asp-route-page="@ViewBag.CurrentPage + 1">@(ViewBag.CurrentPage + 1)</a></li>
+            }*@
+            <li><a asp-controller="News" asp-action="index" asp-route-page="@(ViewBag.CurrentPage>=ViewBag.PageCount?ViewBag.PageCount:ViewBag.CurrentPage + 1)">Next</a></li>
+        </ul>
+        </div>
+    </div>
+</section>
+
+
+

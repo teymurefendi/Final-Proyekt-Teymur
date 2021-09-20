@@ -1,0 +1,1250 @@
+#back-to-top{
+        opacity: 0;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 12px;
+        border: none;
+        outline: none;
+        background-color: rgb(255, 174, 0);
+        color: white;
+        cursor: pointer;
+        padding: 10px 15px 10px 15px;
+        border-radius: 4px;  
+        transition: all 0.3s linear;  
+}
+
+#rtl-changer{
+    padding: 10px 10px;
+    background-color: rgb(255, 174, 0);
+    border-radius: 3px;
+    color: white;
+    position: fixed;
+    right: 30px;
+    font-size: 12px;
+    top: 30%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 666;
+    text-decoration: none;
+    font-family: "Jost";
+    font-weight: 500;
+    //transition: padding-right 0.3s linear;
+    overflow: hidden;
+    #enable-rtl{
+        position: fixed;
+        text-decoration: none;
+        font-family: "Jost";
+        font-weight: 500;
+        //transition: all 0.3s linear;
+        color: white;
+        font-size: 12px;
+        margin-left: 11px;
+        display: none;
+    }
+    &:hover{
+        padding-right: 100px;
+        #enable-rtl{
+            display: unset;
+        }       
+    }
+}
+
+.direction-ltr {
+    direction: ltr; 
+ }
+ 
+ .direction-rtl {
+    direction: rtl; 
+ }
+
+main{
+    font-family: "Jost";
+    font-size: 15px;
+    font-weight: 400;
+    background-size: cover;
+    line-height: 28.8px;    
+    #photo-of-qaqaw{
+        background: url(/dist/img/5.jpg) no-repeat center center fixed;                
+        background-position:top;
+        background-size: cover;
+        //position: relative;
+        //background-position-y: 20px;
+        .flex-cont{
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            .container{
+                .row{
+                    .col-lg-5{
+                        h3{
+                            font-size: 22px;
+                            margin-bottom: 25px;
+                            color: rgb(255, 174, 0);
+                            font-family: "Jost";
+                        }
+                        h1{
+                            font-size: 48px;
+                            margin-bottom: 20px;
+                            line-height: 56px;
+                            letter-spacing: -1px;
+                            font-family: "Jost";
+                            font-weight: 600;
+                            color: white;
+                        }
+                        p{
+                            font-family: "Jost";
+                            font-size: 16px;
+                            line-height: 1.7em;
+                            margin-top: 0;
+                            font-weight: 400;
+                            color: white;
+                            margin-bottom: 40px;
+                        }
+                        a{
+                            font-family: "Jost";
+                            background-color: rgb(255, 174, 0);
+                            color: white;
+                            
+                            font-weight: bold;
+                            text-decoration: none;
+                            padding: 11px 30px;
+                            min-width: 120px;
+                            text-transform: uppercase;
+                            font-size: 12px;
+                            letter-spacing: 2px; 
+                            border-radius: 2px;  
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #practice-areas{
+        background-color: rgb(255, 174, 0);
+        padding: 0;
+        position: relative;
+        .container-fluid{
+            padding: 0 !important;
+            margin: 0 !important;
+            
+            .row{
+                margin: 0;
+                padding: 0;
+                .col-lg-3{
+                    text-align: center;
+                    padding: 0;
+                    //width: 24.8%;
+                    h3{
+                        text-align: center;
+                        color: white;
+                        padding: 40px;
+                        font-size: 22px;
+                        font-family: 'Jost';
+                        font-weight: 600;
+                        position: relative;
+                        top: 35%;
+                    }
+                    .prac-content{
+                        padding: 50px;
+                        background-color: white;
+                        position: relative;
+                        overflow: hidden;
+                        text-align: center;
+                        transition: all 0.3s linear;
+                        &:hover{
+                            background-color: rgb(255, 174, 0);
+                            .little-i{
+                                color: white;
+                            }
+                            .prac-text{                                                                
+                                h4{
+                                    color: white;
+                                }
+                                p{
+                                    color: white;
+                                }
+                            }
+                            .big-i{
+                                transform: rotate(-25deg);
+                            }          
+                        }
+                        .little-i{
+                            text-align: center;
+                            font-size: 40px;
+                            padding: 14px 0;
+                            width: 56px;
+                            height: 56px;
+                            margin-bottom: 20px;
+                            color: rgb(255, 174, 0);
+                            transition: all 0.3s linear;
+                        }
+                        .prac-text{
+                            h4{
+                                font-size: 20px;
+                                margin-top: 0;
+                                margin-bottom: 10px;
+                                font-family: "Jost";
+                                font-weight: 600;
+                                color: #111111;  
+                                transition: all 0.3s linear;  
+                            }
+                            p{
+                                font-family: "Jost";
+                                color: rgb(73, 68, 68);
+                                margin-bottom: 20px;
+                                transition: all 0.3s linear;
+                            }
+                        }
+                        .big-i{
+                            position: absolute;
+                            font-size: 200px;
+                            background: none;
+                            width: auto;
+                            height: auto;
+                            color: rgba(0, 0, 0, .1);
+                            right: 0;
+                            top: 35%;
+                            padding: 14px 0;
+                            transition: all 0.4s linear;
+                        }
+                        a{
+                            background-color: black;
+                            color: white;
+                            border-radius: 2px;
+                            font-weight: bold;
+                            text-decoration: none;
+                            padding: 11px 30px;
+                            min-width: 120px;
+                            text-transform: uppercase;
+                            font-size: 12px;
+                            letter-spacing: 2px;   
+                            font-family: "Jost";
+                            position: relative;
+                            z-index: 40;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #wellcome{
+        background-color: rgb(242, 242, 242);
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        padding: 90px 0 180px 0;
+        .container{
+            .row{
+                align-items: center!important;
+                .col-md-4{
+                    span{
+                        color: rgb(255, 174, 0);
+                        font-size: 12px;
+                        margin-bottom: 20px;
+                        font-family: "Jost";
+                        font-weight: bold;
+                        letter-spacing: 2px;
+                        line-height: 10px;
+                        text-transform: uppercase;
+                        display: inline-block;
+                    }
+                    h2{
+                        display: inline-block;
+                        overflow: hidden;
+                        position: relative;
+                        left: 0;
+                        right: 0;
+                        margin-top: 0;
+                        margin-bottom: 10px;
+                        font-size: 36px;
+                        line-height: 42px;
+                        letter-spacing: -1px; 
+                        font-family: "Jost";  
+                        font-weight: 600;
+                        color: #111111;
+                        
+                    }
+                    #basic-line{
+                        width: 1.5px;
+                        height: 100px;
+                        background-color: rgb(255, 174, 0);
+                        position: relative;
+                        transform: rotate(90deg);
+                        display: inline-block;
+                        top: 60px;
+                        right: 200px;
+                    }
+                }
+                .col-md-8{
+                    p{
+                        margin-bottom: 20px;
+                        font-family: "Jost";
+                        font-size: 15px;
+                        font-weight: 400;
+                        color: #606060;
+                        line-height: 1.8em;    
+                    }
+                }
+            }
+        }
+    }
+    #law{
+        background-size: cover;
+        //bottom: 110px;
+        position: relative;
+        z-index: 993;
+        padding-bottom: 90px;
+        .container{
+            .row{
+                 margin-top: -100px;
+                .col-md-4{
+                    .content{
+                        
+                         width: 100%;
+                         position: relative;
+                        overflow: hidden !important;
+                        display: inline-block;
+                        border-radius: 3px;
+                        &:hover{
+                            .content-2{
+                                top: 24%;
+                                height: 100%;
+                                background-color: rgba(14, 13, 13, 0.699);
+                            }
+                        }
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                        .content-2{
+                            display: table;
+                            position: absolute;
+                            z-index: 80;
+                            width: 100%;
+                            height: 70px;
+                            padding: 25px;
+                            bottom: 0px;
+                            top: 100%;
+                            margin-top: -70px;
+                            background-color: rgb(255, 174, 0);
+                            border-radius: 3px;
+                            transition: all 0.3s linear;
+                            .content-2-inner{
+                                display: table-cell;
+                                vertical-align: middle;
+                                
+                                h3{
+                                    font-size: 18px;
+                                    color: #fff;
+                                    line-height: 1em;
+                                    padding-left: 30px;
+                                    i{
+                                        font-size: 32px;
+                                        position: absolute;
+                                        left: 30px;
+                                        margin-top: -8px;
+                                    }
+                                    span{
+                                       margin-left: 20px;
+                                       font-family: "Jost";
+                                    }
+                                }
+                                p{
+                                    color: #bbbbbb;
+                                    padding-top: 20px;
+                                    padding-right: 25px;
+                                    font-family: "Jost";
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .js-scroll {
+            opacity: 0;
+            transition: opacity 500ms;
+          }
+          
+          .js-scroll.scrolled {
+            opacity: 1;
+          }
+        .scrolled.slide-right {
+            animation: slide-in-right 1s ease-in-out both;
+          }
+          @keyframes slide-in-right {
+            0% {
+              -webkit-transform: translateX(100px);
+              transform: translateX(100px);
+              opacity: 0;
+            }
+            100% {
+              -webkit-transform: translateX(0);
+              transform: translateX(0);
+              opacity: 1;
+            }
+          }
+    }
+
+    #women{
+        background-color: rgb(242, 242, 242);
+        background-size: cover;
+        position: relative;
+        height: 583px;
+        .img-container{
+            background: url(/dist/img/9.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            top: 0;
+            margin: 0;
+            // z-index: 34;
+            // float: right;
+        }
+        .container{
+            background-size: cover;
+            height: 403px;
+            position: relative;
+            top: 100px;
+            .row{
+                align-items: center !important;
+                .col-md-5{
+                    span{
+                       color: rgb(255, 174, 0);
+                       font-size: 12px;
+                       margin-bottom: 20px;
+                       font-weight: bold;
+                       letter-spacing: 2px;
+                       line-height: 10px;
+                       text-transform: uppercase;
+                       display: inline-block;
+                       font-family: "Jost";
+                    }
+                    h2{
+                        display: inline-block;
+                        overflow: hidden;
+                        position: relative;
+                        left: 0;
+                        right: 0;
+                        margin-top: 0;
+                        margin-bottom: 10px;
+                        font-size: 36px;
+                        line-height: 42px;
+                        letter-spacing: -1px;
+                        font-family: "Jost";
+                        font-weight: 600;
+                        color: #111111;
+                    }
+                    ul{
+                        margin-bottom: 15px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        li{
+                            border-radius: 4px;
+                            a{
+                                font-family: "Jost";
+                                border-radius: 4px;
+                                display: block;
+                                padding: 10px 20px;
+                                color: rgb(255, 174, 0);
+                                transition: all 0.3s linear;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                    .ul-content-cont{                        
+                        .li-content{
+                            transition: opacity 0.5s linear;
+                            opacity: 0;
+                            
+                            p{
+                                margin-bottom: 20px;
+                                font-family: "Jost";
+                                font-size: 15px;
+                                font-weight: 400;
+                                color: #606060;
+                                line-height: 1.8em;
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .active2{
+            background-color: rgb(255, 174, 0);
+            a{
+                color: white !important;
+            }            
+        }
+        .active3{            
+                opacity: 1 !important;
+                p{
+                    display: block !important;
+                }            
+        }
+    }
+
+    #all-practice-areas{
+        padding: 90px 0 90px 0;
+        position: relative;
+        .container{
+            .row{
+                .col-lg-12{
+                    .header-center{
+                        text-align: center;
+                        h2{
+                            display: inline-block;
+                            overflow: hidden;
+                            position: relative;
+                            left: 0;
+                            right: 0;
+                            margin-bottom: 10px;
+                            font-size: 36px;
+                            line-height: 42px;
+                            font-weight: 600;
+                            font-family: "Jost";
+                            color: #111111;
+                            letter-spacing: -1px;
+                        }
+                        .h2-border{
+                            width: 100px;
+                            height: 3px;
+                            border-top: solid 2px #333333;
+                            border-left: none;
+                            border-right: none;
+                            display: block;
+                            margin: 0 auto;
+                            margin-bottom: 30px;
+                            border-color: rgb(255, 174, 0);  
+                        }
+                    }
+                }
+                .col-md-6{
+                    p{
+                        margin-bottom: 50px;
+                        text-align: center;
+                        font-family: "Jost";
+                        font-size: 15px;
+                        font-weight: 400;
+                        color: #606060;
+                        line-height: 28px;
+                        
+                    }
+                }
+                .col-md-4{
+                    ul{
+                        padding: 0;
+                        li{
+                            margin: 5px 0 5px 0;
+                            i{
+                                color: rgb(255, 174, 0);
+                                background: #111111;
+                                font-size: 12px;
+                                border-radius: 2px;
+                                padding: 5px;
+                                margin-right: 10px;
+                            }
+                            span{
+                                font-family: "Jost";
+                                font-size: 15px;
+                                font-weight: 400;
+                                line-height: 28px;
+                                color: #606060;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .js-scroll {
+            opacity: 0;
+            transition: opacity 500ms;
+          }
+          
+          .js-scroll.scrolled {
+            opacity: 1;
+          }
+        .scrolled.slide-right {
+            animation: slide-in-right 1s ease-in-out both;
+          }
+          @keyframes slide-in-right {
+            0% {
+              -webkit-transform: translateX(100px);
+              transform: translateX(100px);
+              opacity: 0;
+            }
+            100% {
+              -webkit-transform: translateX(0);
+              transform: translateX(0);
+              opacity: 1;
+            }
+          }
+    }
+
+    #what-we-did{
+        background: url(/dist/img/2-bw.jpg) no-repeat center center fixed;
+        background-size: cover;
+        background-position-y: 90px;
+        position: relative;
+        padding: 90px 0 90px 0;
+        .container{
+            .row{
+                .col-md-3{
+                    .start{
+                        color: rgb(255, 174, 0);
+                        font-size: 12px;
+                        margin-bottom: 20px;
+                        font-weight: bold;
+                        letter-spacing: 2px;
+                        line-height: 10px;
+                        text-transform: uppercase;
+                        display: inline-block;
+                    }
+                    h2{
+                         color: white;
+                         font-family: "Jost";
+                         font-weight: 600;
+                         margin-top: 0;
+                         margin-bottom: 15px;
+                         font-size: 36px;
+                         line-height: 42px;
+                         letter-spacing: -1px;  
+                    }
+                    .h2-border2{                        
+                        width: 100px;
+                        height: 3px;
+                        border-top: solid 2px #333333;
+                        display: block;
+                        margin: 0 auto;
+                        margin-left: 0;
+                        margin-bottom: 30px; 
+                        border-color: rgb(255, 174, 0);   
+                    }
+                    .text{
+                         margin-bottom: 20px;
+                         color: white;
+                         font-family: "Jost", Helvetica, Arial, sans-serif;
+                         font-size: 15px;
+                         font-weight: 400;
+                         line-height: 28px;
+                    }
+                }
+                .col-md-8{
+                    .row{
+                        .col-lg-4{
+                            margin-bottom: 30px;
+                            .count-content{
+                                padding: 20px 0 10px 0;
+                                background: none;
+                                h3{
+                                    color: white;
+                                    font-size: 40px;
+                                    margin-bottom: 15px;
+                                    line-height: 14px;  
+                                    font-family: "Jost";
+                                    font-weight: 600;   
+                                    .numscroller{
+                                        font-size: 40px;
+                                    }
+                                }
+                                h5{
+                                    color: rgb(255, 174, 0);
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                    font-family: "Jost";
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #lawyer-team{
+        padding: 90px 0 90px 0;
+        position: relative;
+        .container{
+            .row{
+                .col-md-12{
+                    text-align: center;
+                    h2{
+                        margin-bottom: 10px;
+                        font-size: 36px;
+                        line-height: 42px;
+                        letter-spacing: -1px;
+                        font-family: "Jost";
+                        font-weight: 600;
+                        color: #111111;
+                        display: inline-block;
+                        overflow: hidden;
+                        position: relative;
+                        left: 0;
+                        right: 0;
+                    }
+                    .h2-border3{
+                         width: 100px;
+                         height: 3px;
+                         border-top: solid 2px #333333;
+                         display: block;
+                         margin: 0 auto;
+                         margin-bottom: 30px;
+                         border-color: rgb(255, 174, 0);
+                    }
+                }
+                .col-md-4{
+                    margin-bottom: 30px;
+                    .photo-content-cont{
+                        text-align: center;
+                        .inner-cont{
+                            overflow: hidden;
+                            position: relative;
+                            .inner-overlay{
+                                overflow: hidden;
+                                transition: all 0.3s linear;  
+                                height: auto;                              
+                                img{
+                                    max-width: 100%;                                    
+                                    transition: all 0.3s linear;
+                                    &:hover{                                        
+                                            transform: scale(1.05);                                                                           
+                                    }                                    
+                                }
+                                .icon-cont{
+                                    width: 100%;
+                                    position: absolute;
+                                    bottom: 30px;
+                                    text-align: center;
+                                    .inner-icon{
+                                        display: inline-block;
+                                        padding: 5px 10px 7px 10px;
+                                        border-radius: 3px;
+                                        background-color: rgb(255, 174, 0);
+                                        a{
+                                            color: #ffffff;
+                                            padding: 0 5px;
+                                            transition: all 0.3s linear;
+                                            &:hover{
+                                                color: black;
+                                            }
+                                            i{
+                                               font-size: 15px;
+                                            }
+                                        }
+                                    }                                                                        
+                                }
+                            }
+                        }
+                        h4{
+                             margin-top: 20px;
+                             font-family: "Jost";
+                             font-weight: 600;
+                             color: #111111;
+                             font-size: 20px;
+                        }
+                        p{
+                            color: #606060;
+                            font-family: "Jost";
+                        }
+                    }
+                }
+            }
+        }
+        .js-scroll {
+            opacity: 0;
+            transition: opacity 500ms;
+          }
+          
+          .js-scroll.scrolled {
+            opacity: 1;
+          }
+        .scrolled.slide-right {
+            animation: slide-in-right 1s ease-in-out both;
+          }
+          @keyframes slide-in-right {
+            0% {
+              -webkit-transform: translateX(100px);
+              transform: translateX(100px);
+              opacity: 0;
+            }
+            100% {
+              -webkit-transform: translateX(0);
+              transform: translateX(0);
+              opacity: 1;
+            }
+          }
+    }
+    #testimonial{
+        background: url(/dist/img/3-bw.jpg) no-repeat center center fixed;
+        background-size: cover;
+        padding: 90px 0 90px 0;
+        position: relative;
+        background-position-y: 90px;
+        .container{            
+            .row{         
+                .col-lg-12{
+                    .topic-cont{
+                        text-align: center;
+                        color: white;
+                        h2{
+                            display: inline-block;
+                            overflow: hidden;
+                            position: relative;
+                            left: 0;
+                            right: 0;
+                            margin-bottom: 10px;
+                            font-size: 36px;
+                            line-height: 42px;
+                            letter-spacing: -1px;
+                            font-family: "Jost";
+                            font-weight: 600;
+                        }
+                        .h2-border3{
+                            width: 100px;
+                            height: 3px;
+                            border-top: solid 2px #333333;
+                            display: block;
+                            margin: 0 auto;
+                            margin-bottom: 30px;
+                            border-color: rgb(255, 174, 0);
+                        }
+                    }                   
+                    .testimonial-content{
+                        position: relative;
+                        margin-top: -5px;
+                        bottom: -5px;
+                        //width: 100%;                        
+                        .testimonial-outer{
+                            position: relative;
+                            overflow: hidden;
+                            //display: block;
+                            .testimonial-long{
+                                position: relative;
+                                .testimonial-item{
+                                    display: inline-block;
+                                    width: 359px;
+                                    margin-right: 30px;
+                                    height: auto;
+                                    .item-content{                                        
+                                        display: inline-block;
+                                        .inner-content{
+                                            display: block;
+                                            padding: 50px;
+                                            background: #f8f8f8;
+                                            position: relative;
+                                            overflow: hidden;
+                                            i{
+                                                font-size: 36px;
+                                                color: rgb(255, 174, 0);
+                                            }
+                                            h3{
+                                                margin-top: 10px;
+                                                margin-bottom: 10px;
+                                                font-size: 18px;
+                                                font-family: "Jost";
+                                                font-weight: 600;
+                                                color: #111111;
+                                            }
+                                            p{
+                                                font-family: "Jost";
+                                                font-size: 16px;
+                                                padding: 40px 0 0 0;
+                                                font-weight: 400;
+                                                line-height: 1.7em;
+                                                margin-bottom: 20px;
+                                                color: #111111;
+                                            }
+                                            span{
+                                                font-size: 14px;
+                                                font-weight: normal;
+                                                margin-top: -10px;
+                                                color: rgb(255, 174, 0);
+                                                font-family: "Jost";
+                                                display: block;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }                        
+                    }
+                    .slick-dots{
+                        margin-top: 20px;
+                        text-align: center;
+                        li{
+                            display: inline-block;
+                            width: 8px;
+                            height: 8px;
+                            margin: 0 5px;
+                            border-radius: 30px;  
+                            button{
+                                width: 10px;
+                                height: 10px;
+                                margin: 5px 7px;
+                                background: #D6D6D6;
+                                display: block;
+                                
+                                transition: opacity 200ms ease;
+                                border-radius: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #latest-news{
+        background-size: cover;
+        padding: 90px 0 90px 0;
+        position: relative;
+        .container{
+            .row{
+                .col-md-12{
+                    text-align: center;
+                    h2{
+                        
+                        display: inline-block;
+                        overflow: hidden;
+                        position: relative;
+                        margin-bottom: 10px;
+                        font-size: 36px;
+                        line-height: 42px;
+                        letter-spacing: -1px;
+                        font-family: "Jost";
+                        font-weight: 600;
+                        color: #111111;
+                    }
+                    .h2-border3{
+                        
+                        width: 100px;
+                        height: 3px;
+                        border-top: solid 2px #333333;
+                        display: block;
+                        margin: 0 auto;
+                        margin-bottom: 30px;
+                        border-color: rgb(255, 174, 0);                    
+                    }
+                }
+                .col-lg-4{
+                     .news-item{
+                         .item-content{
+                             overflow: hidden;
+                             margin-bottom: 10px;
+                             .item-date{
+                                position: absolute;
+                                text-align: center;
+                                z-index: 1;
+                                color: white;                               
+                                margin: 20px;
+                                width: 54px;
+                                background-color: rgb(255, 174, 0);
+                                box-shadow: 5px 5px 40px 0px rgba(0, 0, 0, 0.1);
+                                border-radius: 4px;
+                                 .news-day{
+                                    font-size: 32px;
+                                    padding: 8px;
+                                    font-weight: bold;
+                                    color: white;
+                                    text-align: center;
+                                    position: relative;
+                                    top: 4px;
+                                 }
+                                 .news-month{
+                                    font-size: 12px;
+                                    background: rgba(0, 0, 0, 0.1);
+                                    letter-spacing: 2px;
+                                    color: white;
+                                    text-align: center;
+                                    font-family: "Jost";
+                                    font-weight: 400;
+                                    display: block;
+                                 }
+                             }
+                             .item-img{
+                                 position: relative;
+                                 height: fit-content;
+                                 height: auto;
+                                 img{
+                                    width: 100%;
+                                 }
+                             }
+                             .item-text{
+                                background: #f5f5f5;
+                                padding: 30px 40px;
+                                 .news-tag{
+                                    display: inline-block;
+                                    font-size: 10px;
+                                    font-weight: bold;
+                                    letter-spacing: 2px;
+                                    line-height: 10px;
+                                    text-transform: uppercase;
+                                    margin-bottom: 5px;
+                                    color: rgb(255, 174, 0);
+                                 }
+                                 h4{
+                                    margin-top: 10px;
+                                    margin-bottom: 10px;
+                                    font-family: "Jost";
+                                    font-weight: 600;
+                                     a{
+                                        color: #1A1C26;
+                                        text-decoration: none;
+                                        font-size: 22px;
+                                        display: block;
+                                        padding: 0 60px 0 0;
+                                        
+                                     }
+                                 }
+                                 p{
+                                    margin-bottom: 10px;
+                                    font-family: "Jost";
+                                    font-size: 15px;
+                                    font-weight: 400;
+                                    color: #606060;
+                                    line-height: 28px;
+                                 }
+                                 .news-author{
+                                    text-transform: uppercase;
+                                    letter-spacing: 2px;
+                                    font-size: 10px;
+                                    font-weight: 500;
+                                    color: #606060;
+                                    line-height: 28px;
+                                    font-family: "Jost";
+                                 }
+                             }
+                         }
+                     }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width:1200px){
+    #latest-news{        
+        .container{
+            .row{
+                .col-lg-4{
+                     .news-item{
+                         .item-content{
+
+                             .item-text{
+
+                                 h4{
+                                    
+                                     .home-a-dif{
+                                        font-size: 21px !important;                                        
+                                     }
+                                 }
+                             }
+                         }
+                     }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width:991px){
+    #what-we-did{
+        background-position-y: 0px !important;
+    }
+
+    #testimonial{        
+        background-position-y: 0px !important;
+    }
+
+    #latest-news{
+        
+        .container{
+            .row{
+                .col-lg-4{
+                     .news-item{
+                         .item-content{
+                             .item-text{
+                                 h4{
+                                    
+                                     .home-a-dif{
+                                        font-size: 20px !important;                                        
+                                     }
+                                 }
+                             }
+                         }
+                     }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width:767px) {
+    #practice-areas{
+       
+        .container-fluid{
+            .row{
+                #invalid{
+                    height: 300px;
+                }                
+            }
+        }
+    }
+
+}
+
+@media screen and(max-width:575px) {
+    #photo-of-qaqaw{
+
+        .flex-cont{
+           
+            .container{
+                .row{
+                    .col-lg-5{
+                        h3{
+                            font-size: 18px !important;
+                        }
+                        h1{
+                            font-size: 40px !important;
+                        }
+                        p{
+                            font-size: 15px !important;
+                        }
+                        a{
+                            min-width: 100px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #women{
+        .container{
+           
+            .row{
+                
+                .col-md-5{
+                    h2{
+                        font-size: 30px !important;
+                    }
+                    ul{
+                        
+                        li{
+                          
+                            a{
+                                padding: 2.5px 5px !important;
+                            }
+                        }
+                    }
+                    .ul-content-cont{                        
+                        .li-content{
+                            
+                            
+                            p{
+                                font-size: 13px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and(min-width:767px) and(max-width:991px){
+    #women{
+
+        .container{
+           
+            .row{
+                
+                .col-md-5{
+                    h2{
+                        font-size: 30px !important;
+                    }
+                    ul{
+                        
+                        li{
+                          
+                            a{
+                                padding: 3px 6px !important;
+                            }
+                        }
+                    }
+                    .ul-content-cont{                        
+                        .li-content{
+                            
+                            
+                            p{
+                                font-size: 12px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #all-practice-areas{
+      
+        .container{
+            .row{
+                .col-md-4{
+                    ul{
+                       
+                        li{                            
+                            span{
+                                font-size: 11px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+}
+
+
+@media screen and(min-width:991px) and(max-width:1222px){
+    #practice-areas{
+       
+        .container-fluid{
+            
+            
+            .row{
+                
+                .col-lg-3{
+              
+                    .prac-content{
+                      
+                        .prac-text{
+                            h4{
+                                font-size: 14px !important;
+                            }
+                        }
+                        .big-i{
+                           font-size: 160px !important;
+                           top: 55% !important;
+                        }
+                        a{
+                            padding: 10px 20px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+

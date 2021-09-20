@@ -1,0 +1,183 @@
+footer{
+    
+    background: rgb(17, 17, 17);
+    color: rgb(255, 255, 255);
+    padding: 80px 0 0 0;
+    font-size: 14px;
+    #main-footer{
+        .container{
+            background-size: cover;
+            .row{
+                .col-lg-4{
+                    .content-1{
+                        margin-bottom: 30px;
+                        padding-bottom: 30px;
+                        font-family: "Jost";
+                        img{
+                            margin-bottom: 20px;
+                            max-width: 100%;
+                            height: auto;
+                        }
+                        .address-content{
+                            margin-top: 20px;
+                            margin-bottom: 1rem;
+                             span{
+                                
+                                display: block;
+                                margin: 0;
+                                padding: 0;
+                                font-size: 15px;
+                                line-height: 1.7em;
+                                 i{
+                                   font-size: 15px;
+                                   margin-left: 5px;
+                                   margin-right: 15px; 
+                                   color: rgb(255, 174, 0);
+                                 }
+                                 a{
+                                    text-decoration: none;
+                                    color: white;
+                                 }
+                             }
+                        }
+                    }
+                    .content-2{
+                        font-family: "Jost";
+                        h5{
+                            color: rgb(255, 174, 0);
+                            margin-bottom: 30px;
+                            font-size: 16px;
+                            font-weight: 600;
+                        }
+                        ul{
+                            padding: 0;
+                            list-style: none;
+                            margin-bottom: 1rem;
+                            li{
+                                margin-top: 15px;
+                                margin-bottom: 15px;
+                                
+                                &::before{
+                                    font-family: "FontAwesome";
+                                    content: "\f00c";
+                                    margin-right: 15px;
+                                    background: rgb(17, 17, 17);
+                                    padding: 5px;
+                                    border-radius: 2px;
+                                    font-size: 10px;
+                                    color: rgb(255, 174, 0);
+                                }                                                              
+                            }
+                        }
+                    }
+                    .content-3{
+                        font-family: "Jost";
+                        margin-bottom: 30px;
+                        padding-bottom: 30px;
+                        h5{
+                            color: rgb(255, 174, 0);
+                            margin-bottom: 20px;
+                            font-size: 16px;
+                            font-weight: 600;
+                        }
+                        p{
+                            margin-bottom: 25px;
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 28px;
+                        }
+                        form{
+                            display: flex;
+                            
+                           .centered-text{
+                               max-width: 100%;
+                               width: 100%;
+                               input{
+                                background: rgba(255, 255, 255, 0.1);
+                                border: solid 1px #333333;
+                                padding: 9px 12px 9px 12px;
+                                width: 80%;
+                               }
+                               .email-submit{
+                                   i{
+                                       background: rgb(255, 174, 0);
+                                       text-align: center;
+                                       font-size: 28px;
+                                       float: right;
+                                       width: 20%;
+                                       padding: 6px 0 7px 0; 
+                                       color: white;  
+                                   }
+                               }
+                           }
+                        }
+                        .small-text{
+                             font-size: 11px;
+                             margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #subfooter{
+        border-top: solid 1px rgba(255, 255, 255, 0.1);
+        margin-top: 40px;
+        padding: 20px 0 20px 0;
+        .container{
+            .row{
+                .col-md-12{
+                    .content{
+                        display: flex;
+                        justify-content: space-between;
+                        .content-item{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-family: "Jost";
+                            .social-icons{
+                                display: inline-block;
+                                position: relative;
+                                right: 190px;
+                                a{
+                                    text-decoration: none;
+                                    i{
+                                        background: rgb(255, 174, 0);
+                                        color: #fff;
+                                        padding: 12px 10px 8px 10px;
+                                        width: 34px;
+                                        height: 34px;
+                                        text-align: center;
+                                        font-size: 16px;
+                                        margin-left: 5px;
+                                        margin-right: 5px;
+                                        border-radius: 2px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width:767px){
+    #subfooter{
+        span{
+            font-size: 9px !important;
+        }
+        .social-icons{                   
+            right: 0px !important;    
+            i{
+                font-size: 12px !important;
+                width: 20px !important;
+                height: 20px !important;
+                padding: 4px 3px 2px 3px !important;
+                margin-right: 1px !important;
+                margin-left: 1px !important;
+            }           
+        }
+    }
+}

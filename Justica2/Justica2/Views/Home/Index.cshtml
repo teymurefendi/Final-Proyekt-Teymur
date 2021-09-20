@@ -1,0 +1,348 @@
+﻿@model VmHome
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<section id="photo-of-qaqaw">
+    <div class="flex-cont">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <h3>Need Any Help?</h3>
+                    <h1>Finest Defence Lawyer</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a asp-controller="Contact" asp-action="Index" class="@(ViewBag.Active=="Contact"?"active":"")">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="practice-areas">
+    <div class="container-fluid">
+        <div class="row">
+            <div id="invalid" class="col-lg-3 col-md-6">
+                <h3>Practice Areas</h3>
+            </div>
+            @foreach (var item in Model.PracticeAreas.Take(3))
+            {
+                <div class="col-lg-3 col-md-6">
+                    <div class="prac-content">
+                        <i class="@item.Icon little-i"></i>
+                        <div class="prac-text">
+                            <h4>@item.Name</h4>
+                            <p>
+                                @item.About.Substring(0, 107).
+                            </p>
+                        </div>
+                        <i class="@item.Icon big-i"></i>
+                        @foreach (var item2 in item.PracticeAreaNames)
+                        {
+                            <a asp-controller="PracDetail" asp-action="Index" asp-route-Id="@item2.Id">Read More</a>
+                        }                        
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+                <section id="wellcome">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <span>Welcome</span><br>
+                                <h2>
+                                    Reputation. <br>
+                                    Respect. Result.
+                                </h2>
+                                <div id="basic-line"></div>
+                            </div>
+                            <div class="col-md-8">
+                                <p>
+                                    Consequat occaecat ullamco amet non eiusmod nostrud dolore irure incididunt est duis anim sunt officia. Fugiat velit proident aliquip nisi incididunt nostrud exercitation proident est nisi. Irure magna elit commodo anim ex veniam culpa eiusmod id nostrud sit cupidatat in veniam ad. Eiusmod consequat eu adipisicing minim anim aliquip cupidatat culpa excepteur quis. Occaecat sit eu exercitation irure Lorem incididunt nostrud.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="law">
+                    <div class="container">
+                        <div class="row">
+                            @foreach (var item in Model.Laws)
+                            {
+                                <div class="col-md-4">
+                                    <div class="content js-scroll slide-right">
+                                        <img src="~/dist/img/@item.Img" alt="">
+                                        <div class="content-2">
+                                            <div class="content-2-inner">
+                                                <h3>
+                                                    <i class="@item.Icon"></i>
+                                                    <span>@item.Title</span>
+                                                </h3>
+                                                <p>@item.Text</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </section>
+                <section id="women">
+                    <div class="img-container col-md-6"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-5 offset-md-7">
+                                <span>Experiences</span><br>
+                                <h2>
+                                    @Model.Our.Title.Substring(0, 19)<br>
+                                    @Model.Our.Title.Substring(20)
+                                </h2>
+                                <ul id="raptor">
+                                    @{int i = 1; }
+                                    @foreach (var item in Model.OurParts)
+                                    {
+                                        <li class="raptor-li @(i == 1 ? "active2":"")" data-form="@i"><a href="">@item.Title</a></li>
+                                        i++;
+                                    }
+                                </ul>
+                                <div class="ul-content-cont">
+                                    @{ int j = 1;}
+                                    @foreach (var item in Model.OurParts)
+                                    {
+                                        <div class="li-content @(j == 1 ? "active3":"")" id="li-@j" data-type="@j">
+                                            <p>@item.Text</p>
+                                        </div>
+                                        j++;
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="all-practice-areas">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="header-center">
+                                    <h2>All Practice Areas</h2>
+                                    <div class="h2-border"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 offset-md-3">
+                                <p>Consequat occaecat ullamco amet non eiusmod nostrud dolore irure incididunt est duis anim sunt officia. Fugiat velit proident aliquip nisi incididunt nostrud exercitation proident est nisi. Irure magna elit commodo anim ex veniam culpa.</p>
+                            </div>
+                            @for (int r = 0; r < 3; r++)
+                            {
+                                <div class="col-md-4 js-scroll slide-right">
+                                    <ul>
+                                        @if (r == 0)
+                                        {
+                                            @foreach (var item2 in Model.AllPracticeAreas.Take(4))
+                                            {
+                                                <li>
+                                                    <i class="@item2.Icon"></i>
+                                                    <span>@item2.Name</span>
+                                                </li>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            if (r == 1)
+                                            {
+                                                @foreach (var item2 in Model.AllPracticeAreas.Skip(4).SkipLast(4))
+                                                {
+                                                    <li>
+                                                        <i class="@item2.Icon"></i>
+                                                        <span>@item2.Name</span>
+                                                    </li>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                if (r == 2)
+                                                {
+                                                    @foreach (var item2 in Model.AllPracticeAreas.TakeLast(4))
+                                                    {
+                                                        <li>
+                                                            <i class="@item2.Icon"></i>
+                                                            <span>@item2.Name</span>
+                                                        </li>
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    </ul>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </section>
+                <section id="what-we-did">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <p class="start">Fun facts</p><br>
+                                <h2>
+                                    @Model.WhatWeDid.Title
+                                </h2>
+                                <div class="h2-border2"></div>
+                                <p class="text">@Model.WhatWeDid.Text</p>
+                            </div>
+                            <div class="col-md-8 offset-md-1">
+                                <div class="row">
+                                    @{ int f = 1;}
+                                    @foreach (var item in Model.WeDidParts)
+                                    {
+                                        <div class="col-lg-4 col-md-6">
+                                            <div class="count-content">
+                                                @if (f % 2 == 0)
+                                                {
+                                                    <h3>
+                                                        <span id="1" class='counter' data-number='@item.Number' data-speed='100' data-step='2'>0</span>k
+                                                    </h3>
+                                                }
+                                                else
+                                                {
+                                                    if (f == 3)
+                                                    {
+                                                        <h3>
+                                                            <span id="1" class='counter' data-number='@item.Number' data-speed='1000' data-step='1'>0</span>m
+                                                        </h3>
+                                                    }
+                                                    else
+                                                    {
+                                                        if (f == 5)
+                                                        {
+                                                            <h3>
+                                                                <span id="1" class='counter' data-number='@item.Number' data-speed='100' data-step='10'>0</span>+
+                                                            </h3>
+                                                        }
+                                                        else
+                                                        {
+                                                            <h3>
+                                                                <span id="1" class='counter' data-number='@item.Number' data-speed='1' data-step='10'>0</span>
+                                                            </h3>
+                                                        }
+                                                    }
+                                                }
+                                                <h5>@item.Name</h5>
+                                            </div>
+                                        </div>
+                                        f++;
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                @await Component.InvokeAsync("VcTeam")
+                <section id="testimonial">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="topic-cont">
+                                    <h2>Testimonials</h2>
+                                    <div class="h2-border3"></div>
+                                </div>
+                                <div class="testimonial-content">
+                                    <div class="testimonial-outer">
+                                        <div class="testimonial-long">
+                                            @{ int h = 1;}
+                                            @foreach (var item in Model.Testimonials)
+                                            {
+                                                if (h <= 3)
+                                                {
+                                                    <div class="testimonial-item">
+                                                        <div class="item-content">
+                                                            <div class="inner-content">
+                                                                <i class="@item.Icon"></i>
+                                                                <h3>@item.Title</h3>
+                                                                <p>@item.Text</p>
+                                                                <span>@item.Name, @item.Company</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                }
+                                                else
+                                                {
+                                                    if (h > 3 && h < 7)
+                                                    {
+                                                        <div class="testimonial-item active">
+                                                            <div class="item-content">
+                                                                <div class="inner-content">
+                                                                    <i class="@item.Icon"></i>
+                                                                    <h3>@item.Title</h3>
+                                                                    <p>@item.Text</p>
+                                                                    <span>@item.Name, @item.Company</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                    else
+                                                    {
+                                                        if (h > 7)
+                                                        {
+                                                            <div class="testimonial-item cloned">
+                                                                <div class="item-content">
+                                                                    <div class="inner-content">
+                                                                        <i class="@item.Icon"></i>
+                                                                        <h3>@item.Title</h3>
+                                                                        <p>@item.Text</p>
+                                                                        <span>@item.Name, @item.Company</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        }
+                                                    }
+                                                }
+                                                h++;
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="latest-news">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2>Latest News</h2>
+                                <div class="h2-border3"></div>
+                            </div>
+                            @{ int k = 1;}
+                            @foreach (var item in Model.News.Take(3))
+                            {
+                                <div class="col-lg-4 col-md-6 @(k==3 ? "hidden-md":"")">
+                                    <div class="news-item">
+                                        <div class="item-content">
+                                            <div class="item-date">
+                                                <span class="news-day">@item.CreatedDAte.Day</span>
+                                                <span class="news-month">@item.CreatedDAte.ToString("MMM")</span>
+                                            </div>
+                                            <div class="item-img">
+                                                <img src="~/dist/img/@item.Img" alt="">
+                                            </div>
+                                            <div class="item-text">
+                                                <span class="news-tag">Law Firm</span>
+                                                <h4>
+                                                    @foreach (var item2 in item.NewsNames)
+                                                    {
+                                                        <a class="home-a-dif @(ViewBag.Active=="News"?"active":"")" asp-controller="NewsDetail" asp-action="Index" asp-route-Id="@item2.Id">@item2.Name</a>
+                                                    }
+                                                   
+                                                </h4>
+                                                <p>@item.Text1.Substring(0, 124)</p>
+                                                <span class="news-author">@item.Author</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                k++;
+                            }
+                        </div>
+                    </div>
+                </section>
+

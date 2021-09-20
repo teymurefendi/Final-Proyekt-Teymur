@@ -1,0 +1,90 @@
+main{
+    #investigation{
+        .row{
+            margin-bottom: 30px;
+            .custom-box{
+                .cust-text{
+                    margin-bottom: 30px;
+                }
+                a{
+                    background: black;
+                    color: white;
+                    border-radius: 2px;
+                    outline: 0;
+                    font-weight: bold;
+                    text-decoration: none;
+                    padding: 11px 30px;
+                    min-width: 120px;
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    letter-spacing: 2px;
+                    font-family: "Jost";
+                    position: relative;
+                    z-index: 33;
+                }
+            }
+        }
+    }
+    #meeting{
+        background-color: rgb(255, 174, 0);
+        padding-top: 40px;
+        padding-bottom: 40px;
+        .container{
+            .row{
+                align-items: center;
+                .col-md-8{
+                    h3{
+                         color: white;
+                         font-size: 22px;
+                         font-family: "Jost";
+                         font-weight: 600;
+                    }
+                }
+                .col-md-4{
+                    text-align: right;
+                    a{
+                        background: #111111;
+                        color: white;
+                        border-radius: 2px;
+                        font-weight: bold;
+                        text-decoration: none;
+                        padding: 11px 30px;
+                        min-width: 120px;
+                        text-transform: uppercase;
+                        font-size: 12px;
+                        letter-spacing: 2px;
+                        font-family: "Jost";    
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and(max-width:1200px){
+    
+}
+
+@media screen and(max-width:991px){
+    #meeting{      
+        .container{
+            .row{
+                .col-md-8{
+                    text-align: center;
+                    h3{
+                         font-size: 18px !important;
+                         margin-bottom: 20px !important;
+                    }
+                }
+                .col-md-4{
+                    text-align: center !important;
+                    a{
+                        padding: 11px 20px !important;
+                        font-size: 11px !important;   
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,114 @@
+﻿@model VmHeader
+@{
+    Layout = null;
+}
+
+<header>
+    <section id="top-navbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-4 hidden-sm left">
+                    <span class="social-three navbar-widget">
+                        @foreach (var item in Model.SettingSocials.Take(3))
+                        {
+                            <a href="@item.Link"><i class="@item.Icon"></i></a>
+                        }
+                    </span>
+                </div>
+                <div class="col-lg-6 col-md-8 right">
+                    <span class="navbar-widget">
+                        <a class="@(ViewBag.Active=="Faq"?"active":"")" asp-controller="Faq" asp-action="Index">FAQ</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="main-navbar" id="myMainHeader">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="content">
+                        <div class="content-item navbar-logo">
+                            <div id="logo">
+                                <a class="@(ViewBag.Active=="Home"?"active":"")" asp-controller="Home" asp-action="Index">
+                                    <img src="~/dist/img/@Model.Settings.Icon1" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="content-item navbar-middle">
+                            <ul id="menu">
+                                <li class="btn-li"><a class="btn-a @(ViewBag.Active=="Home"?"active":"")" asp-controller="Home" asp-action="Index">Home</a></li>
+                                <li class="btn-li navbar-hover">
+                                    <a class="btn-a nav-hov @(ViewBag.Active=="About"||ViewBag.Active=="Team"||ViewBag.Active=="Faq"?"active":"")" href="#">About</a>
+                                    <ul class="down">
+                                        <li><a asp-controller="AboutUs" asp-action="Index" class="@(ViewBag.Active=="About"?"active":"")">About Us</a></li>
+                                        <li><a asp-controller="Team" asp-action="Index" class="@(ViewBag.Active=="Team"?"active":"")">Team</a></li>
+                                        <li><a asp-controller="Faq" asp-action="Index" class="@(ViewBag.Active=="Faq"?"active":"")">Faq</a></li>
+                                    </ul>
+                                </li>
+                                <li class="btn-li"><a class="btn-a @(ViewBag.Active=="Practice"||ViewBag.Active=="PracDetail"?"active":"")" asp-controller="Practice" asp-action="Index">Practice Areas</a></li>
+                                <li class="btn-li"><a class="btn-a @(ViewBag.Active=="News"||ViewBag.Active=="NewsDetail"?"active":"")" asp-controller="News" asp-action="Index">News</a></li>
+                                <li class="btn-li"><a class="btn-a @(ViewBag.Active=="Contact"?"active":"")" asp-controller="Contact" asp-action="Index">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="content-item navbar-phone">
+                            <div class="phone-content hidden-md">
+                                <span id="text">Need Help?</span>
+                                <i class="fa fa-phone"></i>
+                                <span id="number"> @Model.Settings.Phone1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="main-navbar-respon">
+        <div class="container" id="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="content">
+                        <div class="content-item navbar-logo">
+                            <div id="logo">
+                                <a asp-controller="Home" asp-action="Index" class="@(ViewBag.Active=="Home"?"active":"")">
+                                    <img src="~/dist/img/@Model.Settings.Icon2" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="respon-menu" id="respon-menu">
+                            <ul id="menu" class="menu">
+                                <li class="main-li">
+                                    <a class="btn-a @(ViewBag.Active=="Home"?"active":"")" asp-controller="Home" asp-action="Index">Home</a>
+                                </li>
+                                <li class="main-li">
+                                    <a href="#" class="@(ViewBag.Active=="About"||ViewBag.Active=="Team"||ViewBag.Active=="Faq"?"active":"")">About</a>
+                                    <span id="icon-span" onclick="myBtnSpan()"><img src="~/dist/img/arrow-down.png" alt=""></span>
+                                    <ul id="down" class="down">
+                                        <li class="second-li"><a asp-controller="AboutUs" asp-action="Index" class="@(ViewBag.Active=="About"?"active":"")">About Us</a></li>
+                                        <li class="second-li"><a asp-controller="Team" asp-action="Index" class="@(ViewBag.Active=="Team"?"active":"")">Team</a></li>
+                                        <li class="second-li"><a asp-controller="Faq" asp-action="Index" class="@(ViewBag.Active=="Faq"?"active":"")">FAQ</a></li>
+                                    </ul>
+
+                                </li>
+                                <li class="main-li">
+                                    <a asp-controller="Practice" asp-action="Index" class="@(ViewBag.Active=="Practice"||ViewBag.Active=="PracDetail"?"active":"")">Practise Areas</a>
+                                </li>
+                                <li class="main-li">
+                                    <a asp-controller="News" asp-action="Index" class="@(ViewBag.Active=="News"||ViewBag.Active=="NewsDetail"?"active":"")">News</a>
+                                </li>
+                                <li class="main-li">
+                                    <a asp-controller="Contact" asp-action="Index" class="@(ViewBag.Active=="Contact"?"active":"")">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="content-item">
+                            <div class="icon-menu-tap">
+                                <a class="icon-a" onclick="myBtnA()"><i class="fas fa-bars"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</header>

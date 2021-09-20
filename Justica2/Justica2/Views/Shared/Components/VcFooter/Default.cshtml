@@ -1,0 +1,78 @@
+﻿@model VmFooter
+@{
+    Layout = null;
+}
+
+<footer>
+    <section id="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="content-1">
+                        <a asp-controller="Home" asp-action="Index" class="@(ViewBag.Active=="Home"?"active":"")">
+                            <img src="~/dist/img/@Model.Settings.Icon1" alt="">
+                        </a>
+                        <div class="address-content">
+                            <span><i class="id-color fa fa-map-marker fa-lg"></i>@Model.Settings.Address</span>
+                            <span><i class="id-color fa fa-phone fa-lg"></i>@Model.Settings.Phone2</span>
+                            <span><i class="id-color fa fa-envelope-o fa-lg"></i><a href="@Model.Settings.Link">@Model.Settings.Email</a></span>
+                            <span><i class="id-color fa fa-file-pdf-o fa-lg"></i><a href="~/dist/img/@Model.Settings.Brochure" download="ourBrochure">Download Brochure</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="content-2">
+                        <h5>Practice Areas</h5>
+                        <ul>
+                            @foreach (var item in Model.PracticeAreas.TakeLast(5))
+                            {
+                                <li>@item.Name</li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <div class="content-3">
+                        <h5>Newsletter</h5>
+                        <p>Signup for our newsletter to get the latest news, updates and special offers in your inbox.</p>
+                        <form asp-controller="Home" asp-action="Subscribe" method="POST">
+                            <div class="centered-text">
+                                <input type="email" asp-for="@Model.Subscribe1.Email" placeholder="enter your email">
+                                <button style="background: rgb(255, 174, 0);
+                                       position:relative;
+                                       top:14px;
+                                       right:4px;
+                                       text-decoration:none;
+                                       " type="submit" class="email-submit"><i class="fa fa-long-arrow-right" style="width:25px;"></i></button>
+                            </div>
+                        </form>
+                        <p class="small-text">Your email is safe with us. We don't spam.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="subfooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="content">
+                        <div class="content-item">
+                            <span>
+                                © Copyright 2020 - Justica by Designesia
+                            </span>
+                        </div>
+                        <div class="content-item">
+                            <div class="social-icons">
+                                @foreach (var item in Model.SettingSocials)
+                                {
+                                    <a href="@item.Link"><i class="@item.Icon"></i></a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</footer>

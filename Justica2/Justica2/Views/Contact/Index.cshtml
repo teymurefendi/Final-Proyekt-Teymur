@@ -1,0 +1,64 @@
+﻿@model VmContact
+@{
+    ViewData["Title"] = "Index";
+}
+
+@await Component.InvokeAsync("VcSubheader", new { PageName = "Contact" })
+<section id="address">
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model.Offices)
+            {
+                <div class="col-md-4">
+                    <img src="~/dist/img/@item.Img" alt="">
+                    <h3>@item.Name</h3>
+                    <div class="text-address">
+                        <span class="location"><i class="fas fa-map-marker-alt"></i>@item.Address</span>
+                        <span><i class="fas fa-phone"></i>@item.Phone</span>
+                        <span><i class="fas fa-envelope"></i><a href="@item.Link">@item.Email</a></span>
+                        <span><i class="fa fa-file-pdf-o"></i><a href="~/dist/img/@item.Brochure" download="ourBrochure">Download Brochure</a></span>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+<section id="have-any-ques">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <h3>Do you have any question?</h3>
+                <form asp-controller="Contact" asp-action="Message" method="POST">
+                    <div class="input-cont" id="inp1"><input asp-for="@Model.Form.Name" placeholder="Your Name"></div>
+                    <div class="input-cont" id="inp2"><input asp-for="@Model.Form.Email" placeholder="Your Email"></div>
+                    <div class="input-cont" id="inp3"><input asp-for="@Model.Form.Phone" placeholder="Your Phone"></div>
+                    <div class="input-cont" id="inp4"><textarea asp-for="@Model.Form.Message" placeholder="Your Message"></textarea></div>
+                    <div class="submit-cont" id="submit-cont">
+                        <button type="submit" style="cursor: pointer;
+                                background: #ffae00;
+                                color: white;
+                                font-weight: bold;
+                                text-decoration: none;
+                                padding: 11px 30px;
+                                min-width: 120px;
+                                text-transform: uppercase;
+                                font-size: 12px;
+                                letter-spacing: 2px;
+                                border-radius: 2px;
+                                border: 1px solid transparent;
+                                line-height: 1.5;
+                                position: relative;
+                                z-index: 1;
+                                overflow: hidden;
+                                display: inline-block;" id="submit-message" value="Submit Form">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+@await Component.InvokeAsync("VcYears")
+
+
+
+

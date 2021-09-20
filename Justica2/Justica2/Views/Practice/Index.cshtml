@@ -1,0 +1,107 @@
+﻿@model VmPractice
+@{
+    ViewData["Title"] = "Index";
+}
+
+@await Component.InvokeAsync("VcSubheader", new { PageName = "Practice Areas" })
+<section id="investigation">
+    <div class="container">
+        @for (int i = 0; i < 3; i++)
+        {
+        <div class="row">
+            @{ int r = 1;}
+            @if (i == 0)
+            {
+                @foreach (var item in Model.practiceAreas.Take(3))
+                {
+                    <div class="col-lg-4 @(r % 3 == 0 ? "hidden-md":"col-md-6")">
+                        <div class="custom-box">
+                            <i class="@item.Icon little-i"></i>
+                            <div class="cust-text">
+                                <h4>@item.Name</h4>
+                                <p>
+                                    @item.About.Substring(0, 107).
+                                </p>
+                            </div>
+                            <i class="@item.Icon big-i" style="top: 40%;"></i>
+                            @foreach (var item2 in item.PracticeAreaNames)
+                            {
+                                <a asp-controller="PracDetail" asp-action="Index" asp-route-Id="@item2.Id">Read More</a>
+                            }
+
+                        </div>
+                    </div>
+                    r++;
+                }
+            }
+            else
+            {
+                if (i == 1)
+                {
+                    @foreach (var item in Model.practiceAreas.Skip(3).SkipLast(3))
+                    {
+                        <div class="col-lg-4 @(r % 3 == 0 ? "hidden-md":"col-md-6")">
+                            <div class="custom-box">
+                                <i class="@item.Icon little-i"></i>
+                                <div class="cust-text">
+                                    <h4>@item.Name</h4>
+                                    <p>
+                                        @item.About.Substring(0, 107).
+                                    </p>
+                                </div>
+                                <i class="@item.Icon big-i" style="top: 40%;"></i>
+                                @foreach (var item2 in item.PracticeAreaNames)
+                                {
+                                    <a asp-controller="PracDetail" asp-action="Index" asp-route-Id="@item2.Id">Read More</a>
+                                }
+                            </div>
+                        </div>
+                        r++;
+                    }
+                }
+                else
+                {
+                    if (i == 2)
+                    {
+                        @foreach (var item in Model.practiceAreas.TakeLast(3))
+                        {
+                            <div class="col-lg-4 @(r % 3 == 0 ? "hidden-md":"col-md-6")">
+                                <div class="custom-box">
+                                    <i class="@item.Icon little-i"></i>
+                                    <div class="cust-text">
+                                        <h4>@item.Name</h4>
+                                        <p>
+                                            @item.About.Substring(0, 107).
+                                        </p>
+                                    </div>
+                                    <i class="@item.Icon big-i" style="top: 40%;"></i>
+                                    @foreach (var item2 in item.PracticeAreaNames)
+                                    {
+                                        <a asp-controller="PracDetail" asp-action="Index" asp-route-Id="@item2.Id">Read More</a>
+                                    }
+                                </div>
+                            </div>
+                            r++;
+                        }
+                    }
+                }
+            }
+        </div>
+        }
+    </div>
+</section>
+<section id="meeting">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
+                <h3>Now! Get a Free Consultation for Your Case.</h3>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <a asp-controller="Contact" asp-action="Index">Make Appointment</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

@@ -1,0 +1,53 @@
+﻿@model Experience
+@{
+    Layout = null;
+}
+@if (ViewBag.Active == "Contact")
+{
+    <section id="years">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12">
+                    <div class="count-twenty">
+                        <h3 id="7" class='counter' data-number='@Model.Year' data-speed='100' data-step='1'>20</h3>
+                        <span>Years of Experience</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 p-lg-5 mb-sm-30">
+                    <span id="title-well">Welcome</span><br>
+                    <h2>@Model.Title</h2>
+                </div>
+                <div class="col-lg-4">
+                    <p>
+                        @Model.Text
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+else
+{
+    <section id="years">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12">
+                    <div class="count-twenty">
+                        <h3 id="7" class='counter' data-number='@Model.Year' data-speed='100' data-step='1'>0</h3>
+                        <span>Years of Experience</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 p-lg-5 mb-sm-30">
+                    <span id="title-well">Welcome</span><br>
+                    <h2>@Model.Title</h2>
+                </div>
+                <div class="col-lg-4">
+                    <p>
+                        @Model.Text
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+

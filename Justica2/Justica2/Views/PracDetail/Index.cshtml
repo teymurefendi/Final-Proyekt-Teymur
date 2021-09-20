@@ -1,0 +1,83 @@
+﻿@model VmPracDetail
+@{
+    ViewData["Title"] = "Index";
+}
+<section id="sub-header">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>@Model.Area.Name</h1>
+                <div class="h1-border" style="width: 300px;">
+                </div>
+                <p>Reputation. Respect. Result.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="single-all">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="single-content">
+                    <img src="~/dist/img/@Model.Area.Img" alt="">
+                    <div class="single-text">
+                        <h1 id="area-title">@Model.Area.Name</h1>
+                        <h1 id="sub-title">@Model.Area.Title</h1>
+                        <p>
+                            @Model.Area.Text1
+                        </p>
+                        <blockquote>@Model.Area.Aforizm</blockquote>
+                        <p>
+                            @Model.Area.Text2
+                        </p>
+                        <p>
+                            @Model.Area.Text3
+                        </p>
+                        <h1>Ready to Defend You</h1>
+                        <p class="qalin">If you have been arrested or charged with a crime, it is important to seek legal advice immediately. Call our branch office criminal defense lawyers at @(Model.Settings.Phone1), @(Model.Settings.Phone2) or complete our <a id="contact-a" asp-controller="Contact" asp-action="Index" class="@(ViewBag.Active=="Contact"?"active":"")">contact form</a> to get in touch with us.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="widget-cont widget-post">
+                    <h4>Other Practice Areas</h4>
+                    <div class="border-h4"></div>
+                    <ul>
+                        @foreach (var item in Model.PracticeAreaNames)
+                        {
+                            if (!(Model.Area.Id == item.PracticeAreaId))
+                            {
+                                <li>
+                                    <i class="@item.practiceArea.Icon"></i>
+                                    <a asp-controller="PracDetail" asp-action="Index" asp-route-Id="@item.Id" class="@(ViewBag.Active=="Practice"?"active":"")">@item.Name</a>
+                                </li>
+                            }
+                        }
+                    </ul>
+                </div>
+                <div class="widget-cont widget-text">
+                    <h4>@Model.Area.Name</h4>
+                    <div class="border-h4"></div>
+                    <p>
+                        @Model.Area.About
+                    </p>
+                </div>
+                <div class="widget-cont widget-form">
+                    <h3>Do you have any question?</h3>
+                    <form id="form-valid" name="questionForm" action="#" method="POST">
+                        <div class="input-cont" id="inp1"><input type="text" name="name" id="name" placeholder="Your Name"></div>
+                        <div class="input-cont" id="inp2"><input type="text" name="email" id="email" placeholder="Your Email"></div>
+                        <div class="input-cont" id="inp3"><input type="text" name="phone" id="phone" placeholder="Your Phone"></div>
+                        <div class="input-cont" id="inp4"><textarea name="message" id="message" placeholder="Your Message"></textarea></div>
+                        <div class="submit-cont" id="submit-cont">
+                            <input type="submit" id="submit-message" value="Submit Form">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

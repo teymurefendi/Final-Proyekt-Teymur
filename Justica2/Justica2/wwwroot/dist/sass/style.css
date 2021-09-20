@@ -1,0 +1,3148 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header .active {
+  color: #ffae00 !important;
+}
+
+header #top-navbar {
+  background-size: cover;
+  z-index: 1000;
+  width: 100%;
+  padding: 0 30px;
+  overflow: hidden;
+  top: 0;
+  background: #111111;
+}
+
+header #top-navbar .container .row .left .social-three {
+  display: flex;
+  padding: 0;
+}
+
+header #top-navbar .container .row .left .social-three a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  display: flex;
+  padding: 5px;
+  padding-left: 15px;
+  display: inline-block;
+  text-align: center;
+}
+
+header #top-navbar .container .row .left .social-three a i {
+  font-size: 16px;
+  margin-top: 8px;
+  margin-right: 10px;
+  color: #ffae00;
+}
+
+header #top-navbar .container .row .right .navbar-widget {
+  font-size: 13px;
+  display: flex;
+  padding: 8px 15px;
+  font-weight: 400;
+  height: 40px;
+  font-family: "Jost";
+  justify-content: flex-end;
+}
+
+header #top-navbar .container .row .right .navbar-widget a {
+  position: relative;
+  top: 5px;
+  text-decoration: none;
+  color: white;
+  margin-right: 15px;
+}
+
+header .main-navbar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+}
+
+header .main-navbar .container {
+  background-size: cover;
+}
+
+header .main-navbar .container .row .col-md-12 .content {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .main-navbar .container .row .col-md-12 .content .content-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .main-navbar .container .row .col-md-12 .content .navbar-middle #menu {
+  font-family: "Jost";
+  font-size: 13px;
+  margin: 0 auto;
+  float: none;
+  text-transform: uppercase;
+}
+
+header .main-navbar .container .row .col-md-12 .content .navbar-middle #menu li {
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin: 0px 0px;
+  padding: 0px 0px;
+  float: left;
+  display: inline;
+  list-style: none;
+  position: relative;
+  transition: all 0.2s linear;
+}
+
+header .main-navbar .container .row .col-md-12 .content .navbar-middle #menu li a {
+  position: relative;
+  display: inline-block;
+  padding: 30px 18px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  outline: none;
+  transition: all 0.2s linear;
+}
+
+header .main-navbar .container .row .col-md-12 .content .navbar-middle #menu li a:hover {
+  color: #ffae00;
+}
+
+header .main-navbar .container .row .col-md-12 .content .navbar-middle #menu li .down {
+  width: 210px;
+  height: auto;
+  position: absolute;
+  left: 0px;
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+  box-shadow: 2px 2px 30px 0px rgba(20, 20, 20, 0.1);
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+
+header .main-navbar .container .row .col-md-12 .content .navbar-middle #menu li .down li {
+  font-size: 12px;
+  display: block;
+  float: none;
+}
+
+header .main-navbar .container .row .col-md-12 .content .navbar-middle #menu li .down li a {
+  position: relative;
+  display: inline-block;
+  padding: 5px 15px;
+  text-decoration: none;
+  border-top: none;
+  color: #fcf7f7;
+  width: 100%;
+  border-left: none;
+  text-align: left;
+  font-weight: normal;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+  line-height: 25px;
+  text-transform: none;
+}
+
+header .main-navbar .container .row .col-md-12 .content .navbar-middle #menu li .down li a:hover {
+  color: white;
+  background-color: #ffae00;
+}
+
+header .main-navbar .container .row .col-md-12 .content .navbar-middle #menu .navbar-hover:hover .down {
+  visibility: visible;
+  opacity: 1;
+}
+
+header .main-navbar .container .row .col-md-12 .content .navbar-phone .phone-content {
+  position: relative;
+  color: #ffffff;
+  font-family: 'Jost';
+  padding-left: 40px;
+  padding-top: 20px;
+}
+
+header .main-navbar .container .row .col-md-12 .content .navbar-phone .phone-content #text {
+  display: inline-block;
+  position: absolute;
+  left: 40px;
+  top: 0;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+header .main-navbar .container .row .col-md-12 .content .navbar-phone .phone-content i {
+  color: #ffae00;
+  font-size: 32px;
+  transform: rotateY(180deg);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+
+header .main-navbar .container .row .col-md-12 .content .navbar-phone .phone-content #number {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+header .sticky {
+  position: fixed;
+  z-index: 999999;
+  top: 0px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 0.3s linear;
+}
+
+header .sticky .down {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+header #main-navbar-respon {
+  display: none;
+  overflow: hidden;
+}
+
+header #main-navbar-respon .container {
+  background-size: cover;
+  position: relative;
+  padding-top: 10px;
+  transition: all 0.3s linear;
+}
+
+header #main-navbar-respon .container .row .col-md-12 .content {
+  display: flex;
+  justify-content: space-between;
+}
+
+header #main-navbar-respon .container .row .col-md-12 .content .respon-menu {
+  background-color: white;
+  position: absolute;
+  top: 90px;
+  width: 100%;
+  transition: all 0.3s linear;
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header #main-navbar-respon .container .row .col-md-12 .content .respon-menu #menu {
+  font-family: "Jost";
+  font-size: 13px;
+  float: none;
+  text-transform: uppercase;
+  z-index: 200;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  padding-right: 30px;
+  transition: all 0.3s linear;
+}
+
+header #main-navbar-respon .container .row .col-md-12 .content .respon-menu #menu .main-li {
+  border-bottom: solid 1px #eeeeee;
+  margin: 0;
+  width: 100%;
+  display: block;
+  letter-spacing: 1px;
+  font-weight: 500;
+  position: relative;
+}
+
+header #main-navbar-respon .container .row .col-md-12 .content .respon-menu #menu .main-li a {
+  color: #888888;
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 30px 18px;
+  text-decoration: none;
+}
+
+header #main-navbar-respon .container .row .col-md-12 .content .respon-menu #menu .main-li #icon-span {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  right: 0;
+  margin-top: 30px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+header #main-navbar-respon .container .row .col-md-12 .content .respon-menu #menu .main-li #down {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  left: 0;
+  transition: all 0.3s linear;
+}
+
+header #main-navbar-respon .container .row .col-md-12 .content .respon-menu #menu .main-li #down .second-li {
+  border-top: solid 1px #eee;
+  padding-left: 40px;
+}
+
+header #main-navbar-respon .container .row .col-md-12 .content .content-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header #main-navbar-respon .container .row .col-md-12 .content .content-item .icon-menu-tap a {
+  float: right;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  padding: 4px;
+  text-align: center;
+  color: white;
+  background-color: #ffae00;
+  width: 32px;
+  height: 32px;
+}
+
+header #main-navbar-respon .container .row .col-md-12 .content .content-item .icon-menu-tap a i {
+  position: relative;
+  top: 5px;
+  text-align: center;
+  background-color: #ffae00;
+  font-size: 16px;
+}
+
+header #main-navbar-respon .responsive {
+  opacity: 1;
+  height: fit-content;
+}
+
+header #main-navbar-respon .responsive .main-li a {
+  float: none;
+  display: block;
+  text-align: left;
+}
+
+header #main-navbar-respon .responsive2 {
+  display: unset !important;
+}
+
+header #main-navbar-respon .responsive2 .main-li a {
+  float: none;
+  display: block;
+  text-align: left;
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hidden-sm {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hidden-md {
+    display: none;
+  }
+  .main-navbar {
+    display: none;
+  }
+  .respon-menu {
+    opacity: 0;
+    height: 0;
+  }
+  #main-navbar-respon {
+    display: unset !important;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .respon-menu {
+    width: 95% !important;
+  }
+}
+
+footer {
+  background: #111111;
+  color: white;
+  padding: 80px 0 0 0;
+  font-size: 14px;
+}
+
+footer #main-footer .container {
+  background-size: cover;
+}
+
+footer #main-footer .container .row .col-lg-4 .content-1 {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  font-family: "Jost";
+}
+
+footer #main-footer .container .row .col-lg-4 .content-1 img {
+  margin-bottom: 20px;
+  max-width: 100%;
+  height: auto;
+}
+
+footer #main-footer .container .row .col-lg-4 .content-1 .address-content {
+  margin-top: 20px;
+  margin-bottom: 1rem;
+}
+
+footer #main-footer .container .row .col-lg-4 .content-1 .address-content span {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  line-height: 1.7em;
+}
+
+footer #main-footer .container .row .col-lg-4 .content-1 .address-content span i {
+  font-size: 15px;
+  margin-left: 5px;
+  margin-right: 15px;
+  color: #ffae00;
+}
+
+footer #main-footer .container .row .col-lg-4 .content-1 .address-content span a {
+  text-decoration: none;
+  color: white;
+}
+
+footer #main-footer .container .row .col-lg-4 .content-2 {
+  font-family: "Jost";
+}
+
+footer #main-footer .container .row .col-lg-4 .content-2 h5 {
+  color: #ffae00;
+  margin-bottom: 30px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+footer #main-footer .container .row .col-lg-4 .content-2 ul {
+  padding: 0;
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+footer #main-footer .container .row .col-lg-4 .content-2 ul li {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+footer #main-footer .container .row .col-lg-4 .content-2 ul li::before {
+  font-family: "FontAwesome";
+  content: "\f00c";
+  margin-right: 15px;
+  background: #111111;
+  padding: 5px;
+  border-radius: 2px;
+  font-size: 10px;
+  color: #ffae00;
+}
+
+footer #main-footer .container .row .col-lg-4 .content-3 {
+  font-family: "Jost";
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+
+footer #main-footer .container .row .col-lg-4 .content-3 h5 {
+  color: #ffae00;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+footer #main-footer .container .row .col-lg-4 .content-3 p {
+  margin-bottom: 25px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+footer #main-footer .container .row .col-lg-4 .content-3 form {
+  display: flex;
+}
+
+footer #main-footer .container .row .col-lg-4 .content-3 form .centered-text {
+  max-width: 100%;
+  width: 100%;
+}
+
+footer #main-footer .container .row .col-lg-4 .content-3 form .centered-text input {
+  background: rgba(255, 255, 255, 0.1);
+  border: solid 1px #333333;
+  padding: 9px 12px 9px 12px;
+  width: 80%;
+}
+
+footer #main-footer .container .row .col-lg-4 .content-3 form .centered-text .email-submit i {
+  background: #ffae00;
+  text-align: center;
+  font-size: 28px;
+  float: right;
+  padding: 6px 0 7px 0;
+  color: white;
+}
+
+footer #main-footer .container .row .col-lg-4 .content-3 .small-text {
+  font-size: 11px;
+  margin-top: 10px;
+}
+
+footer #subfooter {
+  border-top: solid 1px rgba(255, 255, 255, 0.1);
+  margin-top: 40px;
+  padding: 20px 0 20px 0;
+}
+
+footer #subfooter .container .row .col-md-12 .content {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer #subfooter .container .row .col-md-12 .content .content-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Jost";
+}
+
+footer #subfooter .container .row .col-md-12 .content .content-item .social-icons {
+  display: inline-block;
+  position: relative;
+  right: 190px;
+}
+
+footer #subfooter .container .row .col-md-12 .content .content-item .social-icons a {
+  text-decoration: none;
+}
+
+footer #subfooter .container .row .col-md-12 .content .content-item .social-icons a i {
+  background: #ffae00;
+  color: #fff;
+  padding: 12px 10px 8px 10px;
+  width: 34px;
+  height: 34px;
+  text-align: center;
+  font-size: 16px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 767px) {
+  #subfooter span {
+    font-size: 9px !important;
+  }
+  #subfooter .social-icons {
+    right: 0px !important;
+  }
+  #subfooter .social-icons i {
+    font-size: 12px !important;
+    width: 20px !important;
+    height: 20px !important;
+    padding: 4px 3px 2px 3px !important;
+    margin-right: 1px !important;
+    margin-left: 1px !important;
+  }
+}
+
+#back-to-top {
+  opacity: 0;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 12px;
+  border: none;
+  outline: none;
+  background-color: #ffae00;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px 10px 15px;
+  border-radius: 4px;
+  transition: all 0.3s linear;
+}
+
+#rtl-changer {
+  padding: 10px 10px;
+  background-color: #ffae00;
+  border-radius: 3px;
+  color: white;
+  position: fixed;
+  right: 30px;
+  font-size: 12px;
+  top: 30%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 666;
+  text-decoration: none;
+  font-family: "Jost";
+  font-weight: 500;
+  overflow: hidden;
+}
+
+#rtl-changer #enable-rtl {
+  position: fixed;
+  text-decoration: none;
+  font-family: "Jost";
+  font-weight: 500;
+  color: white;
+  font-size: 12px;
+  margin-left: 11px;
+  display: none;
+}
+
+#rtl-changer:hover {
+  padding-right: 100px;
+}
+
+#rtl-changer:hover #enable-rtl {
+  display: unset;
+}
+
+.direction-ltr {
+  direction: ltr;
+}
+
+.direction-rtl {
+  direction: rtl;
+}
+
+main {
+  font-family: "Jost";
+  font-size: 15px;
+  font-weight: 400;
+  background-size: cover;
+  line-height: 28.8px;
+}
+
+main #photo-of-qaqaw {
+  background: url(/dist/img/5.jpg) no-repeat center center fixed;
+  background-position: top;
+  background-size: cover;
+}
+
+main #photo-of-qaqaw .flex-cont {
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+main #photo-of-qaqaw .flex-cont .container .row .col-lg-5 h3 {
+  font-size: 22px;
+  margin-bottom: 25px;
+  color: #ffae00;
+  font-family: "Jost";
+}
+
+main #photo-of-qaqaw .flex-cont .container .row .col-lg-5 h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  line-height: 56px;
+  letter-spacing: -1px;
+  font-family: "Jost";
+  font-weight: 600;
+  color: white;
+}
+
+main #photo-of-qaqaw .flex-cont .container .row .col-lg-5 p {
+  font-family: "Jost";
+  font-size: 16px;
+  line-height: 1.7em;
+  margin-top: 0;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 40px;
+}
+
+main #photo-of-qaqaw .flex-cont .container .row .col-lg-5 a {
+  font-family: "Jost";
+  background-color: #ffae00;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 11px 30px;
+  min-width: 120px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  border-radius: 2px;
+}
+
+main #practice-areas {
+  background-color: #ffae00;
+  padding: 0;
+  position: relative;
+}
+
+main #practice-areas .container-fluid {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+main #practice-areas .container-fluid .row {
+  margin: 0;
+  padding: 0;
+}
+
+main #practice-areas .container-fluid .row .col-lg-3 {
+  text-align: center;
+  padding: 0;
+}
+
+main #practice-areas .container-fluid .row .col-lg-3 h3 {
+  text-align: center;
+  color: white;
+  padding: 40px;
+  font-size: 22px;
+  font-family: 'Jost';
+  font-weight: 600;
+  position: relative;
+  top: 35%;
+}
+
+main #practice-areas .container-fluid .row .col-lg-3 .prac-content {
+  padding: 50px;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.3s linear;
+}
+
+main #practice-areas .container-fluid .row .col-lg-3 .prac-content:hover {
+  background-color: #ffae00;
+}
+
+main #practice-areas .container-fluid .row .col-lg-3 .prac-content:hover .little-i {
+  color: white;
+}
+
+main #practice-areas .container-fluid .row .col-lg-3 .prac-content:hover .prac-text h4 {
+  color: white;
+}
+
+main #practice-areas .container-fluid .row .col-lg-3 .prac-content:hover .prac-text p {
+  color: white;
+}
+
+main #practice-areas .container-fluid .row .col-lg-3 .prac-content:hover .big-i {
+  transform: rotate(-25deg);
+}
+
+main #practice-areas .container-fluid .row .col-lg-3 .prac-content .little-i {
+  text-align: center;
+  font-size: 40px;
+  padding: 14px 0;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 20px;
+  color: #ffae00;
+  transition: all 0.3s linear;
+}
+
+main #practice-areas .container-fluid .row .col-lg-3 .prac-content .prac-text h4 {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: "Jost";
+  font-weight: 600;
+  color: #111111;
+  transition: all 0.3s linear;
+}
+
+main #practice-areas .container-fluid .row .col-lg-3 .prac-content .prac-text p {
+  font-family: "Jost";
+  color: #494444;
+  margin-bottom: 20px;
+  transition: all 0.3s linear;
+}
+
+main #practice-areas .container-fluid .row .col-lg-3 .prac-content .big-i {
+  position: absolute;
+  font-size: 200px;
+  background: none;
+  width: auto;
+  height: auto;
+  color: rgba(0, 0, 0, 0.1);
+  right: 0;
+  top: 35%;
+  padding: 14px 0;
+  transition: all 0.4s linear;
+}
+
+main #practice-areas .container-fluid .row .col-lg-3 .prac-content a {
+  background-color: black;
+  color: white;
+  border-radius: 2px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 11px 30px;
+  min-width: 120px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: "Jost";
+  position: relative;
+  z-index: 40;
+}
+
+main #wellcome {
+  background-color: #f2f2f2;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  padding: 90px 0 180px 0;
+}
+
+main #wellcome .container .row {
+  align-items: center !important;
+}
+
+main #wellcome .container .row .col-md-4 span {
+  color: #ffae00;
+  font-size: 12px;
+  margin-bottom: 20px;
+  font-family: "Jost";
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 10px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+main #wellcome .container .row .col-md-4 h2 {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: -1px;
+  font-family: "Jost";
+  font-weight: 600;
+  color: #111111;
+}
+
+main #wellcome .container .row .col-md-4 #basic-line {
+  width: 1.5px;
+  height: 100px;
+  background-color: #ffae00;
+  position: relative;
+  transform: rotate(90deg);
+  display: inline-block;
+  top: 60px;
+  right: 200px;
+}
+
+main #wellcome .container .row .col-md-8 p {
+  margin-bottom: 20px;
+  font-family: "Jost";
+  font-size: 15px;
+  font-weight: 400;
+  color: #606060;
+  line-height: 1.8em;
+}
+
+main #law {
+  background-size: cover;
+  position: relative;
+  z-index: 993;
+  padding-bottom: 90px;
+}
+
+main #law .container .row {
+  margin-top: -100px;
+}
+
+main #law .container .row .col-md-4 .content {
+  width: 100%;
+  position: relative;
+  overflow: hidden !important;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+main #law .container .row .col-md-4 .content:hover .content-2 {
+  top: 24%;
+  height: 100%;
+  background-color: rgba(14, 13, 13, 0.699);
+}
+
+main #law .container .row .col-md-4 .content img {
+  width: 100%;
+  height: 100%;
+}
+
+main #law .container .row .col-md-4 .content .content-2 {
+  display: table;
+  position: absolute;
+  z-index: 80;
+  width: 100%;
+  height: 70px;
+  padding: 25px;
+  bottom: 0px;
+  top: 100%;
+  margin-top: -70px;
+  background-color: #ffae00;
+  border-radius: 3px;
+  transition: all 0.3s linear;
+}
+
+main #law .container .row .col-md-4 .content .content-2 .content-2-inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+main #law .container .row .col-md-4 .content .content-2 .content-2-inner h3 {
+  font-size: 18px;
+  color: #fff;
+  line-height: 1em;
+  padding-left: 30px;
+}
+
+main #law .container .row .col-md-4 .content .content-2 .content-2-inner h3 i {
+  font-size: 32px;
+  position: absolute;
+  left: 30px;
+  margin-top: -8px;
+}
+
+main #law .container .row .col-md-4 .content .content-2 .content-2-inner h3 span {
+  margin-left: 20px;
+  font-family: "Jost";
+}
+
+main #law .container .row .col-md-4 .content .content-2 .content-2-inner p {
+  color: #bbbbbb;
+  padding-top: 20px;
+  padding-right: 25px;
+  font-family: "Jost";
+}
+
+main #law .js-scroll {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+main #law .js-scroll.scrolled {
+  opacity: 1;
+}
+
+main #law .scrolled.slide-right {
+  animation: slide-in-right 1s ease-in-out both;
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+main #women {
+  background-color: #f2f2f2;
+  background-size: cover;
+  position: relative;
+  height: 583px;
+}
+
+main #women .img-container {
+  background: url(/dist/img/9.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  margin: 0;
+}
+
+main #women .container {
+  background-size: cover;
+  height: 403px;
+  position: relative;
+  top: 100px;
+}
+
+main #women .container .row {
+  align-items: center !important;
+}
+
+main #women .container .row .col-md-5 span {
+  color: #ffae00;
+  font-size: 12px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 10px;
+  text-transform: uppercase;
+  display: inline-block;
+  font-family: "Jost";
+}
+
+main #women .container .row .col-md-5 h2 {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: -1px;
+  font-family: "Jost";
+  font-weight: 600;
+  color: #111111;
+}
+
+main #women .container .row .col-md-5 ul {
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main #women .container .row .col-md-5 ul li {
+  border-radius: 4px;
+}
+
+main #women .container .row .col-md-5 ul li a {
+  font-family: "Jost";
+  border-radius: 4px;
+  display: block;
+  padding: 10px 20px;
+  color: #ffae00;
+  transition: all 0.3s linear;
+  text-decoration: none;
+}
+
+main #women .container .row .col-md-5 .ul-content-cont .li-content {
+  transition: opacity 0.5s linear;
+  opacity: 0;
+}
+
+main #women .container .row .col-md-5 .ul-content-cont .li-content p {
+  margin-bottom: 20px;
+  font-family: "Jost";
+  font-size: 15px;
+  font-weight: 400;
+  color: #606060;
+  line-height: 1.8em;
+  display: none;
+}
+
+main #women .active2 {
+  background-color: #ffae00;
+}
+
+main #women .active2 a {
+  color: white !important;
+}
+
+main #women .active3 {
+  opacity: 1 !important;
+}
+
+main #women .active3 p {
+  display: block !important;
+}
+
+main #all-practice-areas {
+  padding: 90px 0 90px 0;
+  position: relative;
+}
+
+main #all-practice-areas .container .row .col-lg-12 .header-center {
+  text-align: center;
+}
+
+main #all-practice-areas .container .row .col-lg-12 .header-center h2 {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin-bottom: 10px;
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: 600;
+  font-family: "Jost";
+  color: #111111;
+  letter-spacing: -1px;
+}
+
+main #all-practice-areas .container .row .col-lg-12 .header-center .h2-border {
+  width: 100px;
+  height: 3px;
+  border-top: solid 2px #333333;
+  border-left: none;
+  border-right: none;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-color: #ffae00;
+}
+
+main #all-practice-areas .container .row .col-md-6 p {
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: "Jost";
+  font-size: 15px;
+  font-weight: 400;
+  color: #606060;
+  line-height: 28px;
+}
+
+main #all-practice-areas .container .row .col-md-4 ul {
+  padding: 0;
+}
+
+main #all-practice-areas .container .row .col-md-4 ul li {
+  margin: 5px 0 5px 0;
+}
+
+main #all-practice-areas .container .row .col-md-4 ul li i {
+  color: #ffae00;
+  background: #111111;
+  font-size: 12px;
+  border-radius: 2px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+main #all-practice-areas .container .row .col-md-4 ul li span {
+  font-family: "Jost";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #606060;
+}
+
+main #all-practice-areas .js-scroll {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+main #all-practice-areas .js-scroll.scrolled {
+  opacity: 1;
+}
+
+main #all-practice-areas .scrolled.slide-right {
+  animation: slide-in-right 1s ease-in-out both;
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+main #what-we-did {
+  background: url(/dist/img/2-bw.jpg) no-repeat center center fixed;
+  background-size: cover;
+  background-position-y: 90px;
+  position: relative;
+  padding: 90px 0 90px 0;
+}
+
+main #what-we-did .container .row .col-md-3 .start {
+  color: #ffae00;
+  font-size: 12px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 10px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+main #what-we-did .container .row .col-md-3 h2 {
+  color: white;
+  font-family: "Jost";
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: -1px;
+}
+
+main #what-we-did .container .row .col-md-3 .h2-border2 {
+  width: 100px;
+  height: 3px;
+  border-top: solid 2px #333333;
+  display: block;
+  margin: 0 auto;
+  margin-left: 0;
+  margin-bottom: 30px;
+  border-color: #ffae00;
+}
+
+main #what-we-did .container .row .col-md-3 .text {
+  margin-bottom: 20px;
+  color: white;
+  font-family: "Jost", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+main #what-we-did .container .row .col-md-8 .row .col-lg-4 {
+  margin-bottom: 30px;
+}
+
+main #what-we-did .container .row .col-md-8 .row .col-lg-4 .count-content {
+  padding: 20px 0 10px 0;
+  background: none;
+}
+
+main #what-we-did .container .row .col-md-8 .row .col-lg-4 .count-content h3 {
+  color: white;
+  font-size: 40px;
+  margin-bottom: 15px;
+  line-height: 14px;
+  font-family: "Jost";
+  font-weight: 600;
+}
+
+main #what-we-did .container .row .col-md-8 .row .col-lg-4 .count-content h3 .numscroller {
+  font-size: 40px;
+}
+
+main #what-we-did .container .row .col-md-8 .row .col-lg-4 .count-content h5 {
+  color: #ffae00;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Jost";
+}
+
+main #lawyer-team {
+  padding: 90px 0 90px 0;
+  position: relative;
+}
+
+main #lawyer-team .container .row .col-md-12 {
+  text-align: center;
+}
+
+main #lawyer-team .container .row .col-md-12 h2 {
+  margin-bottom: 10px;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: -1px;
+  font-family: "Jost";
+  font-weight: 600;
+  color: #111111;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+main #lawyer-team .container .row .col-md-12 .h2-border3 {
+  width: 100px;
+  height: 3px;
+  border-top: solid 2px #333333;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-color: #ffae00;
+}
+
+main #lawyer-team .container .row .col-md-4 {
+  margin-bottom: 30px;
+}
+
+main #lawyer-team .container .row .col-md-4 .photo-content-cont {
+  text-align: center;
+}
+
+main #lawyer-team .container .row .col-md-4 .photo-content-cont .inner-cont {
+  overflow: hidden;
+  position: relative;
+}
+
+main #lawyer-team .container .row .col-md-4 .photo-content-cont .inner-cont .inner-overlay {
+  overflow: hidden;
+  transition: all 0.3s linear;
+  height: auto;
+}
+
+main #lawyer-team .container .row .col-md-4 .photo-content-cont .inner-cont .inner-overlay img {
+  max-width: 100%;
+  transition: all 0.3s linear;
+}
+
+main #lawyer-team .container .row .col-md-4 .photo-content-cont .inner-cont .inner-overlay img:hover {
+  transform: scale(1.05);
+}
+
+main #lawyer-team .container .row .col-md-4 .photo-content-cont .inner-cont .inner-overlay .icon-cont {
+  width: 100%;
+  position: absolute;
+  bottom: 30px;
+  text-align: center;
+}
+
+main #lawyer-team .container .row .col-md-4 .photo-content-cont .inner-cont .inner-overlay .icon-cont .inner-icon {
+  display: inline-block;
+  padding: 5px 10px 7px 10px;
+  border-radius: 3px;
+  background-color: #ffae00;
+}
+
+main #lawyer-team .container .row .col-md-4 .photo-content-cont .inner-cont .inner-overlay .icon-cont .inner-icon a {
+  color: #ffffff;
+  padding: 0 5px;
+  transition: all 0.3s linear;
+}
+
+main #lawyer-team .container .row .col-md-4 .photo-content-cont .inner-cont .inner-overlay .icon-cont .inner-icon a:hover {
+  color: black;
+}
+
+main #lawyer-team .container .row .col-md-4 .photo-content-cont .inner-cont .inner-overlay .icon-cont .inner-icon a i {
+  font-size: 15px;
+}
+
+main #lawyer-team .container .row .col-md-4 .photo-content-cont h4 {
+  margin-top: 20px;
+  font-family: "Jost";
+  font-weight: 600;
+  color: #111111;
+  font-size: 20px;
+}
+
+main #lawyer-team .container .row .col-md-4 .photo-content-cont p {
+  color: #606060;
+  font-family: "Jost";
+}
+
+main #lawyer-team .js-scroll {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+main #lawyer-team .js-scroll.scrolled {
+  opacity: 1;
+}
+
+main #lawyer-team .scrolled.slide-right {
+  animation: slide-in-right 1s ease-in-out both;
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+main #testimonial {
+  background: url(/dist/img/3-bw.jpg) no-repeat center center fixed;
+  background-size: cover;
+  padding: 90px 0 90px 0;
+  position: relative;
+  background-position-y: 90px;
+}
+
+main #testimonial .container .row .col-lg-12 .topic-cont {
+  text-align: center;
+  color: white;
+}
+
+main #testimonial .container .row .col-lg-12 .topic-cont h2 {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin-bottom: 10px;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: -1px;
+  font-family: "Jost";
+  font-weight: 600;
+}
+
+main #testimonial .container .row .col-lg-12 .topic-cont .h2-border3 {
+  width: 100px;
+  height: 3px;
+  border-top: solid 2px #333333;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-color: #ffae00;
+}
+
+main #testimonial .container .row .col-lg-12 .testimonial-content {
+  position: relative;
+  margin-top: -5px;
+  bottom: -5px;
+}
+
+main #testimonial .container .row .col-lg-12 .testimonial-content .testimonial-outer {
+  position: relative;
+  overflow: hidden;
+}
+
+main #testimonial .container .row .col-lg-12 .testimonial-content .testimonial-outer .testimonial-long {
+  position: relative;
+}
+
+main #testimonial .container .row .col-lg-12 .testimonial-content .testimonial-outer .testimonial-long .testimonial-item {
+  display: inline-block;
+  width: 359px;
+  margin-right: 30px;
+  height: auto;
+}
+
+main #testimonial .container .row .col-lg-12 .testimonial-content .testimonial-outer .testimonial-long .testimonial-item .item-content {
+  display: inline-block;
+}
+
+main #testimonial .container .row .col-lg-12 .testimonial-content .testimonial-outer .testimonial-long .testimonial-item .item-content .inner-content {
+  display: block;
+  padding: 50px;
+  background: #f8f8f8;
+  position: relative;
+  overflow: hidden;
+}
+
+main #testimonial .container .row .col-lg-12 .testimonial-content .testimonial-outer .testimonial-long .testimonial-item .item-content .inner-content i {
+  font-size: 36px;
+  color: #ffae00;
+}
+
+main #testimonial .container .row .col-lg-12 .testimonial-content .testimonial-outer .testimonial-long .testimonial-item .item-content .inner-content h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-family: "Jost";
+  font-weight: 600;
+  color: #111111;
+}
+
+main #testimonial .container .row .col-lg-12 .testimonial-content .testimonial-outer .testimonial-long .testimonial-item .item-content .inner-content p {
+  font-family: "Jost";
+  font-size: 16px;
+  padding: 40px 0 0 0;
+  font-weight: 400;
+  line-height: 1.7em;
+  margin-bottom: 20px;
+  color: #111111;
+}
+
+main #testimonial .container .row .col-lg-12 .testimonial-content .testimonial-outer .testimonial-long .testimonial-item .item-content .inner-content span {
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: -10px;
+  color: #ffae00;
+  font-family: "Jost";
+  display: block;
+}
+
+main #testimonial .container .row .col-lg-12 .slick-dots {
+  margin-top: 20px;
+  text-align: center;
+}
+
+main #testimonial .container .row .col-lg-12 .slick-dots li {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 5px;
+  border-radius: 30px;
+}
+
+main #testimonial .container .row .col-lg-12 .slick-dots li button {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: #D6D6D6;
+  display: block;
+  transition: opacity 200ms ease;
+  border-radius: 30px;
+}
+
+main #latest-news {
+  background-size: cover;
+  padding: 90px 0 90px 0;
+  position: relative;
+}
+
+main #latest-news .container .row .col-md-12 {
+  text-align: center;
+}
+
+main #latest-news .container .row .col-md-12 h2 {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: -1px;
+  font-family: "Jost";
+  font-weight: 600;
+  color: #111111;
+}
+
+main #latest-news .container .row .col-md-12 .h2-border3 {
+  width: 100px;
+  height: 3px;
+  border-top: solid 2px #333333;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-color: #ffae00;
+}
+
+main #latest-news .container .row .col-lg-4 .news-item .item-content {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+main #latest-news .container .row .col-lg-4 .news-item .item-content .item-date {
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+  color: white;
+  margin: 20px;
+  width: 54px;
+  background-color: #ffae00;
+  box-shadow: 5px 5px 40px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+main #latest-news .container .row .col-lg-4 .news-item .item-content .item-date .news-day {
+  font-size: 32px;
+  padding: 8px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  position: relative;
+  top: 4px;
+}
+
+main #latest-news .container .row .col-lg-4 .news-item .item-content .item-date .news-month {
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.1);
+  letter-spacing: 2px;
+  color: white;
+  text-align: center;
+  font-family: "Jost";
+  font-weight: 400;
+  display: block;
+}
+
+main #latest-news .container .row .col-lg-4 .news-item .item-content .item-img {
+  position: relative;
+  height: fit-content;
+  height: auto;
+}
+
+main #latest-news .container .row .col-lg-4 .news-item .item-content .item-img img {
+  width: 100%;
+}
+
+main #latest-news .container .row .col-lg-4 .news-item .item-content .item-text {
+  background: #f5f5f5;
+  padding: 30px 40px;
+}
+
+main #latest-news .container .row .col-lg-4 .news-item .item-content .item-text .news-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 10px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  color: #ffae00;
+}
+
+main #latest-news .container .row .col-lg-4 .news-item .item-content .item-text h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Jost";
+  font-weight: 600;
+}
+
+main #latest-news .container .row .col-lg-4 .news-item .item-content .item-text h4 a {
+  color: #1A1C26;
+  text-decoration: none;
+  font-size: 22px;
+  display: block;
+  padding: 0 60px 0 0;
+}
+
+main #latest-news .container .row .col-lg-4 .news-item .item-content .item-text p {
+  margin-bottom: 10px;
+  font-family: "Jost";
+  font-size: 15px;
+  font-weight: 400;
+  color: #606060;
+  line-height: 28px;
+}
+
+main #latest-news .container .row .col-lg-4 .news-item .item-content .item-text .news-author {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 10px;
+  font-weight: 500;
+  color: #606060;
+  line-height: 28px;
+  font-family: "Jost";
+}
+
+@media screen and (max-width: 1200px) {
+  #latest-news .container .row .col-lg-4 .news-item .item-content .item-text h4 .home-a-dif {
+    font-size: 21px !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #what-we-did {
+    background-position-y: 0px !important;
+  }
+  #testimonial {
+    background-position-y: 0px !important;
+  }
+  #latest-news .container .row .col-lg-4 .news-item .item-content .item-text h4 .home-a-dif {
+    font-size: 20px !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #practice-areas .container-fluid .row #invalid {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #photo-of-qaqaw .flex-cont .container .row .col-lg-5 h3 {
+    font-size: 18px !important;
+  }
+  #photo-of-qaqaw .flex-cont .container .row .col-lg-5 h1 {
+    font-size: 40px !important;
+  }
+  #photo-of-qaqaw .flex-cont .container .row .col-lg-5 p {
+    font-size: 15px !important;
+  }
+  #photo-of-qaqaw .flex-cont .container .row .col-lg-5 a {
+    min-width: 100px !important;
+  }
+  #women .container .row .col-md-5 h2 {
+    font-size: 30px !important;
+  }
+  #women .container .row .col-md-5 ul li a {
+    padding: 2.5px 5px !important;
+  }
+  #women .container .row .col-md-5 .ul-content-cont .li-content p {
+    font-size: 13px !important;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  #women .container .row .col-md-5 h2 {
+    font-size: 30px !important;
+  }
+  #women .container .row .col-md-5 ul li a {
+    padding: 3px 6px !important;
+  }
+  #women .container .row .col-md-5 .ul-content-cont .li-content p {
+    font-size: 12px !important;
+  }
+  #all-practice-areas .container .row .col-md-4 ul li span {
+    font-size: 11px !important;
+  }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1222px) {
+  #practice-areas .container-fluid .row .col-lg-3 .prac-content .prac-text h4 {
+    font-size: 14px !important;
+  }
+  #practice-areas .container-fluid .row .col-lg-3 .prac-content .big-i {
+    font-size: 160px !important;
+    top: 55% !important;
+  }
+  #practice-areas .container-fluid .row .col-lg-3 .prac-content a {
+    padding: 10px 20px !important;
+  }
+}
+
+main #partner {
+  background-color: white;
+  background-size: cover;
+  padding: 90px 0 90px 0;
+  position: relative;
+}
+
+main #partner .container .row {
+  align-items: center;
+}
+
+main #partner .container .row .col-md-5 span {
+  color: #ffae00;
+  font-size: 12px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 10px;
+  text-transform: uppercase;
+  display: inline-block;
+  font-family: "Jost";
+}
+
+main #partner .container .row .col-md-5 h2 {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin-bottom: 10px;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: -1px;
+  font-family: "Jost";
+  font-weight: 600;
+  color: #111111;
+}
+
+main #partner .container .row .col-md-5 p {
+  margin-bottom: 20px;
+  font-family: "Jost";
+  font-size: 15px;
+  font-weight: 400;
+  color: #606060;
+  line-height: 28px;
+}
+
+main #partner .container .row .col-md-6 .img-cont {
+  position: relative;
+  width: 100%;
+}
+
+main #partner .container .row .col-md-6 .img-cont .added-text-cont {
+  background: #ffae00;
+  position: absolute;
+  width: 40%;
+  top: 40%;
+  left: -10%;
+  z-index: 1;
+  text-align: center;
+  padding: 10% 0;
+  box-shadow: 2px 20px 30px 0px rgba(20, 20, 20, 0.3);
+  border-radius: 2px;
+}
+
+main #partner .container .row .col-md-6 .img-cont .added-text-cont h1 {
+  color: #fff;
+  line-height: 56px;
+  letter-spacing: -1px;
+  font-size: 4vw;
+  font-family: "Jost";
+  font-weight: 600;
+}
+
+main #partner .container .row .col-md-6 .img-cont .added-text-cont span {
+  text-align: center;
+  color: white;
+  font-family: "Jost";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+main #partner .container .row .col-md-6 .img-cont .small-img {
+  border-radius: 2px;
+  box-shadow: 2px 20px 30px 0px rgba(20, 20, 20, 0.3);
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  right: -10%;
+  bottom: -10%;
+  z-index: 1;
+}
+
+main #partner .container .row .col-md-6 .img-cont .big-img {
+  border-radius: 2px;
+  box-shadow: 2px 20px 30px 0px rgba(20, 20, 20, 0.3);
+  max-width: 100%;
+}
+
+main #years {
+  background-color: #111111;
+  background-size: cover;
+  padding: 90px 0 90px 0;
+  position: relative;
+}
+
+main #years .container .row {
+  align-items: center;
+}
+
+main #years .container .row .col-lg-4 .count-twenty {
+  border: solid 2px #333333;
+  padding: 30px;
+  text-align: center;
+}
+
+main #years .container .row .col-lg-4 .count-twenty h3 {
+  font-size: 180px;
+  line-height: 1em;
+  color: white;
+  margin-bottom: 15px;
+  font-family: "Jost";
+  font-weight: 600;
+}
+
+main #years .container .row .col-lg-4 .count-twenty span {
+  font-size: 14px;
+  letter-spacing: 5px;
+  font-weight: bold;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  color: #ffae00;
+}
+
+main #years .container .row .col-lg-4 #title-well {
+  color: #ffae00;
+  font-size: 12px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 10px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+main #years .container .row .col-lg-4 h2 {
+  color: white;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin-bottom: 10px;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: -1px;
+  font-family: "Jost";
+  font-weight: 600;
+}
+
+main #years .container .row .col-lg-4 p {
+  margin-bottom: 20px;
+  color: white;
+  font-family: "Jost";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.8em;
+}
+
+main #investigation {
+  padding: 90px 0 90px 0;
+  position: relative;
+}
+
+main #investigation .container .row .col-lg-4 .custom-box {
+  padding: 50px;
+  background: #f8f8f8;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.3s linear;
+}
+
+main #investigation .container .row .col-lg-4 .custom-box:hover {
+  background-color: #ffae00;
+}
+
+main #investigation .container .row .col-lg-4 .custom-box:hover .little-i {
+  color: white;
+}
+
+main #investigation .container .row .col-lg-4 .custom-box:hover .cust-text h4 {
+  color: white;
+}
+
+main #investigation .container .row .col-lg-4 .custom-box:hover .cust-text p {
+  color: white;
+}
+
+main #investigation .container .row .col-lg-4 .custom-box:hover .big-i {
+  transform: rotate(-25deg);
+}
+
+main #investigation .container .row .col-lg-4 .custom-box .little-i {
+  text-align: center;
+  font-size: 40px;
+  padding: 14px 0;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 20px;
+  color: #ffae00;
+  transition: all 0.3s linear;
+}
+
+main #investigation .container .row .col-lg-4 .custom-box .cust-text {
+  text-align: center;
+}
+
+main #investigation .container .row .col-lg-4 .custom-box .cust-text h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-family: "Jost";
+  font-weight: 600;
+  color: #111111;
+  transition: all 0.3s linear;
+}
+
+main #investigation .container .row .col-lg-4 .custom-box .cust-text p {
+  font-family: "Jost";
+  font-size: 15px;
+  font-weight: 400;
+  color: #606060;
+  line-height: 28px;
+  transition: all 0.3s linear;
+}
+
+main #investigation .container .row .col-lg-4 .custom-box .big-i {
+  position: absolute;
+  font-size: 200px;
+  background: none;
+  width: auto;
+  height: auto;
+  color: rgba(0, 0, 0, 0.1);
+  right: 0;
+  top: 35%;
+  padding: 14px 0;
+  transition: all 0.4s linear;
+}
+
+@media screen and (max-width: 767px) {
+  #partner .container .row .col-md-6 .img-cont .added-text-cont {
+    left: 5% !important;
+    top: 60% !important;
+  }
+  #partner .container .row .col-md-6 .img-cont .small-img {
+    right: 5% !important;
+    width: 30% !important;
+    height: 30% !important;
+  }
+  #investigation {
+    padding: 90px 0 90px 0;
+    position: relative;
+  }
+  #investigation .container .row .col-lg-4 .custom-box {
+    margin-bottom: 20px !important;
+  }
+}
+
+main #address {
+  padding: 90px 0 90px 0;
+  position: relative;
+}
+
+main #address .container .row .col-md-4 img {
+  margin-bottom: 30px;
+  max-width: 100%;
+}
+
+main #address .container .row .col-md-4 h3 {
+  font-size: 22px;
+  margin-bottom: 25px;
+  font-family: "Jost";
+  font-weight: 600;
+  color: #111111;
+}
+
+main #address .container .row .col-md-4 .text-address {
+  margin-top: 20px;
+  margin-bottom: 16px;
+}
+
+main #address .container .row .col-md-4 .text-address span {
+  font-size: 15px;
+  line-height: 27px;
+  display: block;
+}
+
+main #address .container .row .col-md-4 .text-address span i {
+  font-size: 15px;
+  color: #ffae00;
+  line-height: 12px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 15px;
+  display: inline-block;
+}
+
+main #address .container .row .col-md-4 .text-address span a {
+  color: #707070;
+  text-decoration: none;
+  transition: all 0.3s linear;
+}
+
+main #address .container .row .col-md-4 .text-address span a:hover {
+  color: #ffae00;
+}
+
+main #have-any-ques {
+  background-color: #111111;
+  background-size: cover;
+  padding: 90px 0 90px 0;
+  position: relative;
+}
+
+main #have-any-ques .container .row .col-lg-8 h3 {
+  color: white;
+  font-size: 22px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-family: "Jost";
+  font-weight: 600;
+}
+
+main #have-any-ques .container .row .col-lg-8 form {
+  text-align: center;
+}
+
+main #have-any-ques .container .row .col-lg-8 form .input-cont {
+  font-family: "Jost";
+  font-size: 15px;
+  font-weight: 400;
+  color: #606060;
+  line-height: 28px;
+}
+
+main #have-any-ques .container .row .col-lg-8 form .input-cont input {
+  padding: 8px;
+  margin-bottom: 20px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: visible;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  width: 100%;
+  border-radius: 3px;
+  transition: all 0.3s linear;
+}
+
+main #have-any-ques .container .row .col-lg-8 form .input-cont textarea {
+  padding: 8px;
+  margin-bottom: 20px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: visible;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  width: 100%;
+  height: 195px;
+  border-radius: 3px;
+  transition: all 0.3s linear;
+}
+
+main #have-any-ques .container .row .col-lg-8 form .submit-cont {
+  margin-top: 15px;
+  text-align: center;
+}
+
+main #have-any-ques .container .row .col-lg-8 form .submit-cont button {
+  cursor: pointer;
+  background: #ffae00;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 11px 30px;
+  min-width: 120px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  border-radius: 2px;
+  font-family: "Jost";
+  border: 1px solid transparent;
+  line-height: 1.5;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+}
+
+main #have-any-ques .container .row .col-lg-8 form .submit-success {
+  clear: both;
+  display: none;
+  color: #96c346;
+  padding-top: 20px;
+  text-align: center;
+  font-family: "Jost";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+main #have-any-ques .container .row .col-lg-8 form .submit-error {
+  clear: both;
+  display: none;
+  color: #e7505a;
+  padding-top: 20px;
+  font-family: "Jost";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+main #basqail {
+  background: url(/dist/img/2.jpg);
+  background-size: cover;
+  padding: 90px 0 90px 0;
+  position: relative;
+}
+
+main #basqail .container .row {
+  align-items: center;
+}
+
+main #basqail .container .row .col-lg-4 .count-twenty {
+  border: solid 2px #918585;
+  padding: 30px;
+  text-align: center;
+}
+
+main #basqail .container .row .col-lg-4 .count-twenty h3 {
+  font-size: 180px;
+  line-height: 1em;
+  color: white;
+  margin-bottom: 15px;
+  font-family: "Jost";
+  font-weight: 600;
+}
+
+main #basqail .container .row .col-lg-4 .count-twenty span {
+  font-size: 14px;
+  letter-spacing: 5px;
+  font-weight: bold;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  color: #ffae00;
+}
+
+main #basqail .container .row .col-lg-4 #title-well {
+  color: #ffae00;
+  font-size: 12px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 10px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+main #basqail .container .row .col-lg-4 h2 {
+  color: white;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin-bottom: 10px;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: -1px;
+  font-family: "Jost";
+  font-weight: 600;
+}
+
+main #basqail .container .row .col-lg-4 p {
+  margin-bottom: 20px;
+  color: white;
+  font-family: "Jost";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.8em;
+}
+
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  #address .container .row .col-md-4 .text-address .location {
+    font-size: 12px;
+  }
+}
+
+main #sub-header {
+  background: url(/dist/img/subheader3.jpg) no-repeat center center fixed;
+  background-position: top;
+  text-align: center;
+  overflow: hidden;
+  padding: 100px 0 100px 0;
+}
+
+main #sub-header .container {
+  text-align: center;
+}
+
+main #sub-header .container .row .col {
+  text-align: center;
+}
+
+main #sub-header .container .row .col h1 {
+  margin-top: 80px;
+  color: white;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -1px;
+  font-family: "Jost";
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: inline-block;
+  position: relative;
+}
+
+main #sub-header .container .row .col .h1-border {
+  text-align: center;
+  display: block;
+  border-bottom: solid 3px #ffffff;
+  border-color: #ffae00;
+  width: 100px;
+  height: 3px;
+  margin: 0 auto;
+}
+
+main #sub-header .container .row .col p {
+  margin-bottom: 20px;
+  color: white;
+  font-family: "Jost";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+main #faq-section {
+  padding: 90px 0 90px 0;
+  position: relative;
+}
+
+main #faq-section .container .row .col-md-6 {
+  margin-bottom: 30px;
+}
+
+main #faq-section .container .row .col-md-6 .box-all {
+  padding: 5px;
+  background: #ffae00;
+  box-shadow: 5px 5px 40px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+main #faq-section .container .row .col-md-6 .box-all .box-heading {
+  padding: 15px 10px 0 10px;
+  text-align: center;
+}
+
+main #faq-section .container .row .col-md-6 .box-all .box-heading h3 {
+  color: white;
+  font-size: 22px;
+  margin-bottom: 25px;
+  font-family: "Jost";
+  font-weight: 600;
+}
+
+main #faq-section .container .row .col-md-6 .box-all .box-content {
+  margin: 5px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 2px;
+}
+
+main #faq-section .container .row .col-md-6 .box-all .box-content .accordion {
+  overflow: hidden;
+}
+
+main #faq-section .container .row .col-md-6 .box-all .box-content .accordion .accordion-all .accordion-topic {
+  width: 100%;
+  padding: 15px;
+  display: inline-block;
+  transition: all 0.5s linear;
+  margin-bottom: 10px;
+  border: solid 1px #EFEFEF;
+  border-radius: 4px;
+}
+
+main #faq-section .container .row .col-md-6 .box-all .box-content .accordion .accordion-all .accordion-topic p {
+  color: black;
+  font-family: "Jost";
+  transition: all 0.5s linear;
+  font-weight: 600;
+  font-size: 16px;
+  display: inline-block;
+}
+
+main #faq-section .container .row .col-md-6 .box-all .box-content .accordion .accordion-all .accordion-topic span img {
+  position: relative;
+  z-index: 33;
+  float: right;
+  color: #fff;
+  position: relative;
+  top: 10px;
+}
+
+main #faq-section .container .row .col-md-6 .box-all .box-content .accordion .accordion-all .accordion-content {
+  padding: 0;
+  padding-bottom: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 0;
+  margin-bottom: 0;
+  transition: all 0.3s linear;
+}
+
+main #faq-section .container .row .col-md-6 .box-all .box-content .accordion .accordion-all .accordion-content p {
+  margin-bottom: 20px;
+  font-family: "Jost";
+  font-size: 15px;
+  font-weight: 400;
+  color: #606060;
+  line-height: 28px;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+
+main #faq-section .acc-active {
+  height: 200px !important;
+  padding: 15px !important;
+  padding-bottom: 5px !important;
+  margin-bottom: 10px !important;
+}
+
+main #faq-section .acc-active p {
+  opacity: 1 !important;
+}
+
+main #faq-section .rotate {
+  background: #ffae00;
+}
+
+main #faq-section .rotate p {
+  color: white !important;
+}
+
+main #faq-section .rotate span img {
+  transform: rotate(180deg);
+}
+
+@media screen and (max-width: 575px) {
+  #faq-section .container .row .col-md-6 .box-all .box-content .accordion .accordion-all .accordion-topic p {
+    font-size: 10.5px !important;
+  }
+  #faq-section .container .row .col-md-6 .box-all .box-content .accordion .accordion-all .accordion-topic span img {
+    transform: scale(0.6);
+  }
+  #faq-section .container .row .col-md-6 .box-all .box-content .accordion .accordion-all .accordion-content p {
+    font-size: 10px !important;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #faq-section .container .row .col-md-6 .box-all .box-content .accordion .accordion-all .accordion-topic p {
+    font-size: 8px !important;
+  }
+  #faq-section .container .row .col-md-6 .box-all .box-content .accordion .accordion-all .accordion-topic span img {
+    transform: scale(0.6);
+  }
+  #faq-section .container .row .col-md-6 .box-all .box-content .accordion .accordion-all .accordion-content p {
+    font-size: 8px !important;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  #faq-section .container .row .col-md-6 .box-all .box-content .accordion .accordion-all .accordion-topic p {
+    font-size: 10.5px !important;
+  }
+  #faq-section .container .row .col-md-6 .box-all .box-content .accordion .accordion-all .accordion-topic span img {
+    transform: scale(0.6);
+  }
+  #faq-section .container .row .col-md-6 .box-all .box-content .accordion .accordion-all .accordion-content p {
+    font-size: 10px !important;
+  }
+}
+
+main #latest-news .row #pagination {
+  font-weight: 500;
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  border-radius: 4px;
+  margin: 0 auto;
+  margin-top: 50px;
+  justify-content: center;
+}
+
+main #latest-news .row #pagination li {
+  font-family: "Jost";
+  font-size: 15px;
+  color: #606060;
+  line-height: 28px;
+}
+
+main #latest-news .row #pagination li a {
+  font-size: 12px;
+  color: #888;
+  border: solid 1px #eee;
+  background: none;
+  padding: 15px 20px 15px 20px;
+  text-decoration: none;
+}
+
+main #latest-news .row #pagination .active {
+  background: #ffae00;
+  color: white;
+}
+
+@media screen and (max-width: 1400px) {
+  #latest-news .row .col-lg-4 .news-item .item-content .item-text h4 .news-a-dif {
+    font-size: 15px !important;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #latest-news .row #pagination li {
+    font-size: 12px !important;
+  }
+  #latest-news .row #pagination li a {
+    font-size: 10px !important;
+    padding: 9px 13px 9px 13px !important;
+  }
+}
+
+main #single-all {
+  padding: 90px 0 90px 0;
+  position: relative;
+}
+
+main #single-all .container .row .col-md-8 .single-content img {
+  margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+}
+
+main #single-all .container .row .col-md-8 .single-content .single-text p {
+  margin-bottom: 20px;
+  font-family: "Jost";
+  font-size: 16px;
+  font-weight: 400;
+  color: #606060;
+  line-height: 28px;
+}
+
+main #single-all .container .row .col-md-8 .single-content .single-text blockquote {
+  font-family: "Jost";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  border: none;
+  border-left: solid 3px #333333;
+  padding-left: 30px;
+  color: #111111;
+  margin-bottom: 12px;
+  border-color: #ffae00;
+}
+
+main #single-all .container .row .col-md-8 .single-content .single-text .news-date {
+  margin-right: 20px;
+  font-size: 13px;
+  color: #999;
+  font-family: "Jost";
+  font-weight: 400;
+  line-height: 28px;
+}
+
+main #single-all .container .row .col-md-8 .single-content .single-text .news-com {
+  margin-right: 20px;
+  font-size: 13px;
+  color: #999;
+  font-family: "Jost";
+  font-weight: 400;
+  line-height: 28px;
+}
+
+main #single-all .container .row .col-md-8 .single-content .single-text .news-com i {
+  padding-right: 10px;
+  font-size: 11px;
+}
+
+main #single-all .container .row .col-md-8 .single-content .single-text #news-like {
+  margin-right: 20px;
+  font-size: 13px;
+  color: #999;
+  font-family: "Jost";
+  font-weight: 400;
+  line-height: 28px;
+}
+
+main #single-all .container .row .col-md-8 .single-content .single-text #news-like #urek {
+  padding-right: 10px;
+  font-size: 11px;
+}
+
+main #single-all .container .row .col-md-8 .single-content .single-text #news-like #like-count {
+  font-size: 13px;
+  color: #999;
+  font-family: "Jost";
+  font-weight: 400;
+  line-height: 28px;
+}
+
+main #single-all .container .row .col-md-8 #news-comment {
+  margin-top: 70px;
+}
+
+main #single-all .container .row .col-md-8 #news-comment h4 {
+  font-size: 20px;
+  margin-bottom: 25px;
+  font-family: "Jost";
+  font-weight: 600;
+  color: #111111;
+}
+
+main #single-all .container .row .col-md-8 #news-comment ol {
+  margin-bottom: 42px;
+}
+
+main #single-all .container .row .col-md-8 #news-comment ol li {
+  min-height: 70px;
+  font-size: 14px;
+  line-height: 26px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: solid 1px #eee;
+}
+
+main #single-all .container .row .col-md-8 #news-comment ol li .avatar {
+  position: absolute;
+  margin-top: 5px;
+}
+
+main #single-all .container .row .col-md-8 #news-comment ol li .avatar img {
+  width: 70px;
+  height: auto;
+}
+
+main #single-all .container .row .col-md-8 #news-comment ol li .comment-info {
+  margin-left: 85px;
+  margin-bottom: 5px;
+}
+
+main #single-all .container .row .col-md-8 #news-comment ol li .comment-info .c-name {
+  display: block;
+  font-weight: 700;
+  color: #555555;
+  font-size: 14px;
+  line-height: 26px;
+  font-family: "Jost";
+}
+
+main #single-all .container .row .col-md-8 #news-comment ol li .comment-info .c-date {
+  font-size: 12px;
+  color: #ffae00;
+  line-height: 26px;
+}
+
+main #single-all .container .row .col-md-8 #news-comment ol li .comment-info .c-reply {
+  padding-left: 20px;
+  margin-left: 20px;
+  border-left: solid 1px #ddd;
+  font-size: 12px;
+}
+
+main #single-all .container .row .col-md-8 #news-comment ol li .comment-info .c-reply a {
+  color: #ffae00;
+  text-decoration: none;
+  font-family: "Jost";
+}
+
+main #single-all .container .row .col-md-8 #news-comment ol li .comment-cont {
+  margin-left: 85px;
+  font-weight: 400;
+  color: #606060;
+  font-family: "Jost";
+}
+
+main #single-all .container .row .col-md-8 #news-comment ol li ol {
+  margin-bottom: 0;
+}
+
+main #single-all .container .row .col-md-8 #news-comment ol li ol li {
+  margin-left: 55px;
+  padding-bottom: 0px;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: solid 1px #eee;
+  border-bottom: none;
+}
+
+main #single-all .container .row .col-md-8 #news-comment #comment-form h4 {
+  font-size: 20px;
+  margin-bottom: 25px;
+  font-family: "Jost";
+  font-weight: 600;
+  color: #111111;
+}
+
+main #single-all .container .row .col-md-8 #news-comment #comment-form .comment-form-cont #comment-form-main label {
+  display: inline-block;
+  margin-bottom: 6px;
+  font-family: "Jost", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #606060;
+  line-height: 28px;
+}
+
+main #single-all .container .row .col-md-8 #news-comment #comment-form .comment-form-cont #comment-form-main input {
+  padding: 10px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #495057;
+  border: 1px solid #ced4da;
+  overflow: visible;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+main #single-all .container .row .col-md-8 #news-comment #comment-form .comment-form-cont #comment-form-main textarea {
+  padding: 10px;
+  height: 170px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #495057;
+  border: 1px solid #ced4da;
+  width: 100%;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+main #single-all .container .row .col-md-8 #news-comment #comment-form .comment-form-cont #comment-form-main #send-btn {
+  margin-bottom: 20px;
+}
+
+main #single-all .container .row .col-md-8 #news-comment #comment-form .comment-form-cont #comment-form-main #send-btn input {
+  font-weight: bold;
+  text-decoration: none;
+  padding: 11px 30px;
+  min-width: 120px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  border-radius: 3px;
+  color: white;
+  background-color: #ffae00;
+  display: inline-block;
+  line-height: 1.5;
+  font-family: "Jost";
+  width: 30px;
+  border: none;
+}
+
+main #single-all .container .row .col-md-4 {
+  padding-left: 30px;
+}
+
+main #single-all .container .row .col-md-4 .widget-cont {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+
+main #single-all .container .row .col-md-4 .widget-cont h4 {
+  font-size: 18px;
+  letter-spacing: normal;
+  font-family: "Jost";
+  font-weight: 600;
+  color: #111111;
+  margin-bottom: 5px;
+}
+
+main #single-all .container .row .col-md-4 .widget-cont .border-h4 {
+  background-color: #ffae00;
+  height: 2px;
+  width: 30px;
+  margin: 0px 0 20px 0;
+  display: block;
+}
+
+main #single-all .container .row .col-md-4 .widget-post ul li {
+  border-bottom: solid 1px #f2f2f2;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+main #single-all .container .row .col-md-4 .widget-post ul li span {
+  color: #fff;
+  display: inline-block;
+  padding: 0px 5px 0px 5px;
+  font-size: 12px;
+  text-align: left;
+  background-color: #ffae00;
+}
+
+main #single-all .container .row .col-md-4 .widget-post ul li a {
+  padding-left: 20px;
+  display: inline-block;
+  text-decoration: none;
+  color: #111111;
+}
+
+main #single-all .container .row .col-md-4 .widget-text p {
+  font-family: "Jost";
+  font-size: 16px;
+  font-weight: 400;
+  color: #606060;
+  line-height: 28px;
+}
+
+main #single-all .container .row .col-md-4 .widget-tags ul {
+  margin-top: 30px;
+}
+
+main #single-all .container .row .col-md-4 .widget-tags ul li {
+  text-shadow: none;
+  display: inline-block;
+  margin-right: 3px;
+  margin-bottom: 16px;
+}
+
+main #single-all .container .row .col-md-4 .widget-tags ul li a {
+  background-color: #ffae00;
+  font-size: 12px;
+  text-decoration: none;
+  margin-bottom: 5px;
+  color: #fff;
+  padding: 7px 10px 7px 10px;
+  border-radius: 3px;
+}
+
+@media screen and (max-width: 575px) {
+  .widget-post ul li {
+    border-bottom: solid 1px #f2f2f2;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+  }
+  .widget-post ul li span {
+    padding: 0px 5px 0px 2px !important;
+    font-size: 10px !important;
+  }
+  .widget-post ul li a {
+    font-size: 11px !important;
+    padding-left: 3px !important;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1200px) {
+  .widget-post ul li {
+    border-bottom: solid 1px #f2f2f2;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+  }
+  .widget-post ul li span {
+    padding: 0px 5px 0px 2px !important;
+    font-size: 9px !important;
+  }
+  .widget-post ul li a {
+    font-size: 10px !important;
+    padding-left: 3px !important;
+  }
+}
+
+main #single-all .single-text #area-title {
+  font-size: 30px;
+  margin-bottom: 25px;
+  font-family: "Jost";
+  font-weight: 600;
+  color: #111111;
+}
+
+main #single-all .single-text #sub-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-family: "Jost";
+  font-weight: 600;
+  color: #111111;
+}
+
+main #single-all .single-text h1 {
+  font-size: 20px;
+  margin-bottom: 25px;
+  font-family: "Jost";
+  font-weight: 600;
+  color: #111111;
+}
+
+main #single-all .single-text .qalin {
+  font-weight: bold !important;
+}
+
+main #single-all .single-text .qalin #contact-a {
+  text-decoration: none;
+  color: #ffae00;
+}
+
+main #single-all .widget-post ul li i {
+  font-size: 15px;
+  color: #ffae00;
+  line-height: 12px;
+  display: inline-block;
+  width: 20px;
+}
+
+main #single-all .widget-form h3 {
+  color: #111111;
+  font-size: 22px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-family: "Jost";
+  font-weight: 600;
+}
+
+main #single-all .widget-form form {
+  text-align: center;
+}
+
+main #single-all .widget-form form .input-cont {
+  font-family: "Jost";
+  font-size: 15px;
+  font-weight: 400;
+  color: #606060;
+  line-height: 28px;
+}
+
+main #single-all .widget-form form .input-cont input {
+  padding: 8px;
+  margin-bottom: 20px;
+  border: none;
+  background: rgba(110, 92, 92, 0.1);
+  overflow: visible;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  width: 100%;
+  border-radius: 3px;
+  transition: all 0.3s linear;
+}
+
+main #single-all .widget-form form .input-cont textarea {
+  padding: 8px;
+  margin-bottom: 20px;
+  border: none;
+  background: rgba(110, 92, 92, 0.1);
+  overflow: visible;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  width: 100%;
+  height: 195px;
+  border-radius: 3px;
+  transition: all 0.3s linear;
+}
+
+main #single-all .widget-form form .submit-cont {
+  margin-top: 15px;
+  text-align: center;
+}
+
+main #single-all .widget-form form .submit-cont input {
+  cursor: pointer;
+  background: #ffae00;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 11px 30px;
+  min-width: 120px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  border-radius: 2px;
+  font-family: "Jost";
+  border: 1px solid transparent;
+  line-height: 1.5;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+}
+
+main #investigation .row {
+  margin-bottom: 30px;
+}
+
+main #investigation .row .custom-box .cust-text {
+  margin-bottom: 30px;
+}
+
+main #investigation .row .custom-box a {
+  background: black;
+  color: white;
+  border-radius: 2px;
+  outline: 0;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 11px 30px;
+  min-width: 120px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: "Jost";
+  position: relative;
+  z-index: 33;
+}
+
+main #meeting {
+  background-color: #ffae00;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+main #meeting .container .row {
+  align-items: center;
+}
+
+main #meeting .container .row .col-md-8 h3 {
+  color: white;
+  font-size: 22px;
+  font-family: "Jost";
+  font-weight: 600;
+}
+
+main #meeting .container .row .col-md-4 {
+  text-align: right;
+}
+
+main #meeting .container .row .col-md-4 a {
+  background: #111111;
+  color: white;
+  border-radius: 2px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 11px 30px;
+  min-width: 120px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: "Jost";
+}
+
+@media screen and (max-width: 991px) {
+  #meeting .container .row .col-md-8 {
+    text-align: center;
+  }
+  #meeting .container .row .col-md-8 h3 {
+    font-size: 18px !important;
+    margin-bottom: 20px !important;
+  }
+  #meeting .container .row .col-md-4 {
+    text-align: center !important;
+  }
+  #meeting .container .row .col-md-4 a {
+    padding: 11px 20px !important;
+    font-size: 11px !important;
+  }
+}
+
+main .member {
+  padding: 90px 0 90px 0;
+  position: relative;
+  background-color: #111111;
+  background-size: cover;
+}
+
+main .member .team-member {
+  overflow: hidden;
+}
+
+main .member .team-member .container .row {
+  align-items: center;
+}
+
+main .member .team-member .container .row .col-md-5 span {
+  color: #ffae00;
+  font-size: 12px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 10px;
+  text-transform: uppercase;
+  display: inline-block;
+  font-family: "Jost";
+}
+
+main .member .team-member .container .row .col-md-5 h2 {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: -1px;
+  display: inline-block;
+  position: relative;
+  font-family: "Jost";
+  font-weight: 600;
+}
+
+main .member .team-member .container .row .col-md-5 p {
+  margin-bottom: 20px;
+  color: white;
+  font-family: "Jost";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+main .member .team-member .container .row .col-md-5 .cust-social a i {
+  font-size: 16px;
+  opacity: .5;
+  text-shadow: none;
+  color: #fff;
+  padding: 12px 10px 8px 10px;
+  width: 34px;
+  height: 34px;
+  text-align: center;
+  transition: all 0.3s linear;
+}
+
+main .member .team-member .container .row .col-md-5 .cust-social a:hover i {
+  color: #ffae00;
+  opacity: 1;
+}
+
+main .member .team-member .cust-img-cont {
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+}
+
+main .member .team-member1 .cust-img-cont {
+  background: url(/dist/img/t1.jpg);
+  background-repeat: no-repeat;
+  background-position-y: top;
+  background-position-x: center;
+  background-size: cover;
+  top: 0;
+  right: 0;
+}
+
+main .member .team-member2 .cust-img-cont {
+  background: url(/dist/img/t2.jpg);
+  background-repeat: no-repeat;
+  background-position-y: top;
+  background-position-x: center;
+  background-size: cover;
+  top: 0;
+  left: 0;
+}
+
+main .member .team-member3 .cust-img-cont {
+  background: url(/dist/img/t3.jpg);
+  background-repeat: no-repeat;
+  background-position-y: top;
+  background-position-x: center;
+  background-size: cover;
+  top: 0;
+  right: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

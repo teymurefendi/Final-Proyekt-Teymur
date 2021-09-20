@@ -1,0 +1,111 @@
+﻿@model VmAbout
+@{
+    ViewData["Title"] = "Index";
+}
+
+@await Component.InvokeAsync("VcSubheader", new { PageName = "About Us" })
+<section id="partner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <span>Who We Are</span><br>
+                <h2>@Model.Legal.Title</h2>
+                <p>@Model.Legal.Text</p>
+            </div>
+            <div class="col-md-6 offset-md-1">
+                <div class="img-cont">
+                    <div class="added-text-cont">
+                        <h1>@Model.Legal.Number</h1>
+                        <span>Solved Cases</span>
+                    </div>
+                    <img class="small-img" src="~/dist/img/@Model.Legal.Img2" alt="">
+                    <img class="big-img" src="~/dist/img/@Model.Legal.Img1" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="women" style="background-color: black;">
+    <div class="img-container col-md-6"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 offset-md-7">
+                <span>Features</span><br>
+                <h2 style="color: white;">
+                    @Model.Our.Title.Substring(0, 19)<br>
+                    @Model.Our.Title.Substring(20)
+                </h2>
+                <ul id="raptor">
+                    @{int i = 1; }
+                    @foreach (var item in Model.OurParts)
+                    {
+                        <li class="raptor-li @(i == 1 ? "active2":"")" data-form="@i"><a href="">@item.Title</a></li>
+                        i++;
+                    }
+                </ul>
+                <div class="ul-content-cont">
+                    @{ int j = 1;}
+                    @foreach (var item in Model.OurParts)
+                    {
+                        <div class="li-content @(j == 1 ? "active3":"")" id="li-@j" data-type="@j">
+                            <p>@item.Text</p>
+                        </div>
+                        j++;
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@await Component.InvokeAsync("VcTeam")
+
+@await Component.InvokeAsync("VcYears")
+
+<section id="investigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="custom-box">
+                    <i class="fas fa-envelope-open-text little-i"></i>
+                    <div class="cust-text">
+                        <h4>Request Quote</h4>
+                        <p>
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem.
+                        </p>
+                    </div>
+                    <i class="fas fa-envelope-open-text big-i"></i>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="custom-box">
+                    <i class="fas fa-search little-i"></i>
+                    <div class="cust-text">
+                        <h4>Investigation</h4>
+                        <p>
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem.
+                        </p>
+                    </div>
+                    <i class="fas fa-search big-i"></i>
+                </div>
+            </div>
+            <div class="col-lg-4 hidden-md">
+                <div class="custom-box">
+                    <i class="far fa-hand-rock little-i"></i>
+                    <div class="cust-text">
+                        <h4>Case Fight</h4>
+                        <p>
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem.
+                        </p>
+                    </div>
+                    <i class="far fa-hand-rock big-i"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

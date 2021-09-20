@@ -1,0 +1,86 @@
+﻿@model VmNewsDetail
+@{
+    ViewData["Title"] = "Index";
+}
+
+<section id="sub-header">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>@Model.New.Name</h1>
+                <div class="h1-border" style="width: 260px;">
+                </div>
+                <p>Reputation. Respect. Result.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="single-all">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="single-content">
+                    <img src="~/dist/img/@Model.New.Img" alt="">
+                    <div class="single-text">
+                        <p>
+                            @Model.New.Text1
+                        </p>
+                        <blockquote>@Model.New.Aforizm</blockquote>
+                        <p>
+                            @Model.New.Text2
+                        </p>
+                        <p>
+                            @Model.New.Text3
+                        </p>
+                        <span class="news-date">@Model.New.CreatedDAte.ToString("dd MMMM yyyy")</span>
+                        <span id="news-like" onclick="likebtn()">
+                            <i id="urek" class="far fa-heart"></i><span id="like-count">181</span>
+                        </span>
+                    </div>
+                </div>
+                <div id="news-comment">
+                    <div id="fb-root"></div>
+                    <div class="fb-comments" data-href="@Model.New.Id" data-width="100%" data-numposts="10"></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="widget-cont widget-post">
+                    <h4>Recent Posts</h4>
+                    <div class="border-h4"></div>
+                    <ul>
+                        @foreach (var item in Model.NewsNames.TakeLast(6))
+                        {
+                            if (!(Model.New.Id == item.NewsId))
+                            {
+                               <li>
+                                   <span>@item.News.CreatedDAte.Day @item.News.CreatedDAte.ToString("MMM")</span>
+                                   <a asp-controller="NewsDetail" asp-action="Index" asp-route-Id="@item.Id" class="@(ViewBag.Active=="News"?"active":"")">@item.Name</a>
+                               </li>
+                            }
+                        }                        
+                    </ul>
+                </div>
+                <div class="widget-cont widget-text">
+                    <h4>About Us</h4>
+                    <div class="border-h4"></div>
+                    <p>
+                        @Model.New.About
+                    </p>
+                </div>
+                <div class="widget-cont widget-tags">
+                    <h4>Tags</h4>
+                    <div class="border-h4"></div>
+                    <ul>
+                        @foreach (var item in Model.New.NewsToTags)
+                        {
+                            <li><a href="#">@item.Tag.Name</a></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

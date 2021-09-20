@@ -1,0 +1,775 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Justica2.Data
+@using Justica2.ViewModels
+@inject AppDbContext _context
+@inject UserManager<IdentityUser> userManager
+@inject SignInManager<IdentityUser> signInManager
+@inject RoleManager<IdentityRole> roleManager
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- BEGIN: Head -->
+<head>
+    <meta charset="utf-8">
+    <link href="~/dist/areas/admin/dist2\images\logo.svg" rel="shortcut icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Midone admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="LEFT4CODE">
+    <title>Dashboard - Midone - Tailwind HTML Admin Template</title>
+    <!-- BEGIN: CSS Assets-->
+    <link rel="stylesheet" href="~/dist/areas/admin/dist2\css\app.css?v=1">
+    <link href="~/dist/areas/admin/dist2/css/app.css" rel="stylesheet" />
+    <!-- END: CSS Assets-->
+</head>
+<!-- END: Head -->
+<body class="app">
+    <!-- BEGIN: Mobile Menu -->
+    <div class="mobile-menu md:hidden">
+        <div class="mobile-menu-bar">
+            <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="flex mr-auto">
+                <img alt="Midone Tailwind HTML Admin Template" class="w-6" src="~/dist/areas/admin/dist2\images\logo.svg">
+            </a>
+            <a href="#" id="mobile-menu-toggler"> <i data-feather="bar-chart-2" class="w-8 h-8 text-white transform -rotate-90"></i> </a>
+        </div>
+        <ul class="border-t border-theme-24 py-5 hidden">
+            <li>
+                <a href="~/areas/admin/index.html" class="menu menu--active">
+                    <div class="menu__icon"> <i data-feather="home"></i> </div>
+                    <div class="menu__title"> Dashboard </div>
+                </a>
+            </li>
+            <li>
+                <a href="~/areas/admin/javascript:;" class="menu">
+                    <div class="menu__icon"> <i data-feather="box"></i> </div>
+                    <div class="menu__title"> Menu Layout <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                </a>
+                <ul class="">
+                    <li>
+                        <a href="~/areas/admin/index.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Side Menu </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/simple-menu-dashboard.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Simple Menu </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/top-menu-dashboard.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Top Menu </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="~/areas/admin/side-menu-inbox.html" class="menu">
+                    <div class="menu__icon"> <i data-feather="inbox"></i> </div>
+                    <div class="menu__title"> Inbox </div>
+                </a>
+            </li>
+            <li>
+                <a href="~/areas/admin/side-menu-file-manager.html" class="menu">
+                    <div class="menu__icon"> <i data-feather="hard-drive"></i> </div>
+                    <div class="menu__title"> File Manager </div>
+                </a>
+            </li>
+            <li>
+                <a href="~/areas/admin/side-menu-point-of-sale.html" class="menu">
+                    <div class="menu__icon"> <i data-feather="credit-card"></i> </div>
+                    <div class="menu__title"> Point of Sale </div>
+                </a>
+            </li>
+            <li>
+                <a href="~/areas/admin/side-menu-chat.html" class="menu">
+                    <div class="menu__icon"> <i data-feather="message-square"></i> </div>
+                    <div class="menu__title"> Chat </div>
+                </a>
+            </li>
+            <li>
+                <a href="~/areas/admin/side-menu-post.html" class="menu">
+                    <div class="menu__icon"> <i data-feather="file-text"></i> </div>
+                    <div class="menu__title"> Post </div>
+                </a>
+            </li>
+            <li class="menu__devider my-6"></li>
+            <li>
+                <a href="~/areas/admin/javascript:;" class="menu">
+                    <div class="menu__icon"> <i data-feather="edit"></i> </div>
+                    <div class="menu__title"> Crud <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                </a>
+                <ul class="">
+                    <li>
+                        <a href="~/areas/admin/side-menu-crud-data-list.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Data List </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/side-menu-crud-form.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Form </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="~/areas/admin/javascript:;" class="menu">
+                    <div class="menu__icon"> <i data-feather="users"></i> </div>
+                    <div class="menu__title"> Users <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                </a>
+                <ul class="">
+                    <li>
+                        <a href="~/areas/admin/side-menu-users-layout-1.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Layout 1 </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/side-menu-users-layout-2.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Layout 2 </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/side-menu-users-layout-3.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Layout 3 </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="~/areas/admin/javascript:;" class="menu">
+                    <div class="menu__icon"> <i data-feather="trello"></i> </div>
+                    <div class="menu__title"> Profile <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                </a>
+                <ul class="">
+                    <li>
+                        <a href="~/areas/admin/side-menu-profile-overview-1.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Overview 1 </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/side-menu-profile-overview-2.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Overview 2 </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/side-menu-profile-overview-3.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Overview 3 </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="~/areas/admin/javascript:;" class="menu">
+                    <div class="menu__icon"> <i data-feather="layout"></i> </div>
+                    <div class="menu__title"> Pages <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                </a>
+                <ul class="">
+                    <li>
+                        <a href="~/areas/admin/javascript:;" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Wizards <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                        </a>
+                        <ul class="">
+                            <li>
+                                <a href="~/areas/admin/side-menu-wizard-layout-1.html" class="menu">
+                                    <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                                    <div class="menu__title">Layout 1</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/areas/admin/side-menu-wizard-layout-2.html" class="menu">
+                                    <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                                    <div class="menu__title">Layout 2</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/areas/admin/side-menu-wizard-layout-3.html" class="menu">
+                                    <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                                    <div class="menu__title">Layout 3</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/javascript:;" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Blog <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                        </a>
+                        <ul class="">
+                            <li>
+                                <a href="~/areas/admin/side-menu-blog-layout-1.html" class="menu">
+                                    <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                                    <div class="menu__title">Layout 1</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/areas/admin/side-menu-blog-layout-2.html" class="menu">
+                                    <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                                    <div class="menu__title">Layout 2</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/areas/admin/side-menu-blog-layout-3.html" class="menu">
+                                    <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                                    <div class="menu__title">Layout 3</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/javascript:;" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Pricing <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                        </a>
+                        <ul class="">
+                            <li>
+                                <a href="~/areas/admin/side-menu-pricing-layout-1.html" class="menu">
+                                    <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                                    <div class="menu__title">Layout 1</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/areas/admin/side-menu-pricing-layout-2.html" class="menu">
+                                    <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                                    <div class="menu__title">Layout 2</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/javascript:;" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Invoice <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                        </a>
+                        <ul class="">
+                            <li>
+                                <a href="~/areas/admin/side-menu-invoice-layout-1.html" class="menu">
+                                    <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                                    <div class="menu__title">Layout 1</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/areas/admin/side-menu-invoice-layout-2.html" class="menu">
+                                    <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                                    <div class="menu__title">Layout 2</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/javascript:;" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> FAQ <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                        </a>
+                        <ul class="">
+                            <li>
+                                <a href="~/areas/admin/side-menu-faq-layout-1.html" class="menu">
+                                    <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                                    <div class="menu__title">Layout 1</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/areas/admin/side-menu-faq-layout-2.html" class="menu">
+                                    <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                                    <div class="menu__title">Layout 2</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/areas/admin/side-menu-faq-layout-3.html" class="menu">
+                                    <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                                    <div class="menu__title">Layout 3</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/login-login.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Login </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/login-register.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Register </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/main-error-page.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Error Page </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/side-menu-update-profile.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Update profile </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/side-menu-change-password.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Change Password </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu__devider my-6"></li>
+            <li>
+                <a href="~/areas/admin/javascript:;" class="menu">
+                    <div class="menu__icon"> <i data-feather="inbox"></i> </div>
+                    <div class="menu__title"> Components <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                </a>
+                <ul class="">
+                    <li>
+                        <a href="~/areas/admin/javascript:;" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Grid <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                        </a>
+                        <ul class="">
+                            <li>
+                                <a href="~/areas/admin/side-menu-regular-table.html" class="menu">
+                                    <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                                    <div class="menu__title">Regular Table</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="~/areas/admin/side-menu-datatable.html" class="menu">
+                                    <div class="menu__icon"> <i data-feather="zap"></i> </div>
+                                    <div class="menu__title">Datatable</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/side-menu-accordion.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Accordion </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/side-menu-button.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Button </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/side-menu-modal.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Modal </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/side-menu-alert.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Alert </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/side-menu-progress-bar.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Progress Bar </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/side-menu-tooltip.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Tooltip </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/side-menu-dropdown.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Dropdown </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/side-menu-toast.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Toast </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/side-menu-typography.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Typography </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/side-menu-icon.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Icon </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/side-menu-loading-icon.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Loading Icon </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="~/areas/admin/javascript:;" class="menu">
+                    <div class="menu__icon"> <i data-feather="sidebar"></i> </div>
+                    <div class="menu__title"> Forms <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                </a>
+                <ul class="">
+                    <li>
+                        <a href="~/areas/admin/side-menu-regular-form.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Regular Form </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/side-menu-datepicker.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Datepicker </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/side-menu-select2.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Select2 </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/side-menu-file-upload.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> File Upload </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/side-menu-wysiwyg-editor.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Wysiwyg Editor </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/side-menu-validation.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Validation </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="~/areas/admin/javascript:;" class="menu">
+                    <div class="menu__icon"> <i data-feather="hard-drive"></i> </div>
+                    <div class="menu__title"> Widgets <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                </a>
+                <ul class="">
+                    <li>
+                        <a href="~/areas/admin/side-menu-chart.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Chart </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/side-menu-slider.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Slider </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/areas/admin/side-menu-image-zoom.html" class="menu">
+                            <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                            <div class="menu__title"> Image Zoom </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- END: Mobile Menu -->
+    <div class="flex">
+        <!-- BEGIN: Side Menu -->
+        <nav class="side-nav">
+            <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="intro-x flex items-center pl-5 pt-4">
+                <img alt="Midone Tailwind HTML Admin Template" class="w-6" src="~/dist/areas/admin/dist2\images\logo.svg">
+                <span class="hidden xl:block text-white text-lg ml-3"> Mid<span class="font-medium">one</span> </span>
+            </a>
+            <div class="side-nav__devider my-6"></div>
+            <ul>
+                <li>
+                    <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="side-menu @(ViewBag.Active == "Dashboard"?"side-menu--active":"")">
+                        <div class="side-menu__icon"> <i data-feather="home"></i> </div>
+                        <div class="side-menu__title"> Dashboard </div>
+                    </a>
+                </li>
+                <li>
+                    <a asp-area="Admin" asp-controller="AllPracticeAreas" asp-action="Index" class="side-menu @(ViewBag.Active == "AllPracticeAreas"?"side-menu--active":"")">
+                        <div class="side-menu__icon"> <i data-feather="user"></i> </div>
+                        <div class="side-menu__title"> All Practice Areas </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="side-menu @(ViewBag.Active == "Faq"?"side-menu--active":"")">
+                        <div class="side-menu__icon"> <i data-feather="box"></i> </div>
+                        <div class="side-menu__title">FAQ<i data-feather="chevron-down" class="side-menu__sub-icon"></i> </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a asp-area="Admin" asp-controller="Faq" asp-action="Index" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                                <div class="side-menu__title">FAQ</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="Admin" asp-controller="FaqPart" asp-action="Index" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                                <div class="side-menu__title">FAQ Parts</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="side-menu @(ViewBag.Active == "Team"?"side-menu--active":"")">
+                        <div class="side-menu__icon"> <i data-feather="box"></i> </div>
+                        <div class="side-menu__title">Team<i data-feather="chevron-down" class="side-menu__sub-icon"></i> </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a asp-area="admin" asp-controller="team" asp-action="index" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="users"></i> </div>
+                                <div class="side-menu__title">Team</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="admin" asp-controller="Position" asp-action="index" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                                <div class="side-menu__title">Position</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="admin" asp-controller="TeamSocial" asp-action="index" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                                <div class="side-menu__title">Team Social</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a asp-area="Admin" asp-controller="Experience" asp-action="Index" class="side-menu @(ViewBag.Active == "Experience"?"side-menu--active":"")">
+                        <div class="side-menu__icon"> <i data-feather="user"></i> </div>
+                        <div class="side-menu__title"> Experience </div>
+                    </a>
+                </li>
+                <li>
+                    <a asp-area="Admin" asp-controller="Law" asp-action="Index" class="side-menu @(ViewBag.Active == "Law"?"side-menu--active":"")">
+                        <div class="side-menu__icon"> <i data-feather="user"></i> </div>
+                        <div class="side-menu__title"> Law </div>
+                    </a>
+                </li>
+                <li>
+                    <a asp-area="Admin" asp-controller="Legal" asp-action="Index" class="side-menu @(ViewBag.Active == "Legal"?"side-menu--active":"")">
+                        <div class="side-menu__icon"> <i data-feather="user"></i> </div>
+                        <div class="side-menu__title"> Legal </div>
+                    </a>
+                </li>
+                <li>
+                    <a asp-area="Admin" asp-controller="Office" asp-action="Index" class="side-menu @(ViewBag.Active == "Office"?"side-menu--active":"")">
+                        <div class="side-menu__icon"> <i data-feather="user"></i> </div>
+                        <div class="side-menu__title"> Office </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="side-menu @(ViewBag.Active == "News"?"side-menu--active":"")">
+                        <div class="side-menu__icon"> <i data-feather="box"></i> </div>
+                        <div class="side-menu__title">News<i data-feather="chevron-down" class="side-menu__sub-icon"></i> </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a asp-area="admin" asp-controller="News" asp-action="index" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="users"></i> </div>
+                                <div class="side-menu__title">News</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="admin" asp-controller="NewsName" asp-action="index" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                                <div class="side-menu__title">News Name</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="admin" asp-controller="Tag" asp-action="index" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                                <div class="side-menu__title">Tag</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="side-menu @(ViewBag.Active == "Our"?"side-menu--active":"")">
+                        <div class="side-menu__icon"> <i data-feather="box"></i> </div>
+                        <div class="side-menu__title">Our<i data-feather="chevron-down" class="side-menu__sub-icon"></i> </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a asp-area="admin" asp-controller="Our" asp-action="index" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="users"></i> </div>
+                                <div class="side-menu__title">Our</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="admin" asp-controller="OurPart" asp-action="index" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                                <div class="side-menu__title">Our Part</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="side-menu @(ViewBag.Active == "PracticeArea"?"side-menu--active":"")">
+                        <div class="side-menu__icon"> <i data-feather="box"></i> </div>
+                        <div class="side-menu__title">Practice<i data-feather="chevron-down" class="side-menu__sub-icon"></i> </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a asp-area="admin" asp-controller="PracticeArea" asp-action="index" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="users"></i> </div>
+                                <div class="side-menu__title">Practice Area</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="admin" asp-controller="PracticeAreaName" asp-action="index" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                                <div class="side-menu__title">Practice Area Name</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="side-menu @(ViewBag.Active == "Settings"?"side-menu--active":"")">
+                        <div class="side-menu__icon"> <i data-feather="box"></i> </div>
+                        <div class="side-menu__title">Settings<i data-feather="chevron-down" class="side-menu__sub-icon"></i> </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a asp-area="admin" asp-controller="Settings" asp-action="index" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="users"></i> </div>
+                                <div class="side-menu__title">Settings</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="admin" asp-controller="SettingSocial" asp-action="index" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                                <div class="side-menu__title">Settings Social</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a asp-area="Admin" asp-controller="Subheader" asp-action="Index" class="side-menu @(ViewBag.Active == "Subheader"?"side-menu--active":"")">
+                        <div class="side-menu__icon"> <i data-feather="user"></i> </div>
+                        <div class="side-menu__title"> Subheader </div>
+                    </a>
+                </li>
+                <li>
+                    <a asp-area="Admin" asp-controller="Subscribe" asp-action="Index" class="side-menu @(ViewBag.Active == "Subscribe"?"side-menu--active":"")">
+                        <div class="side-menu__icon"> <i data-feather="user"></i> </div>
+                        <div class="side-menu__title"> Subscribe </div>
+                    </a>
+                </li>
+                <li>
+                    <a asp-area="Admin" asp-controller="Testimonial" asp-action="Index" class="side-menu @(ViewBag.Active == "Testimonial"?"side-menu--active":"")">
+                        <div class="side-menu__icon"> <i data-feather="user"></i> </div>
+                        <div class="side-menu__title"> Testimonial </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="side-menu @(ViewBag.Active == "WhatWeDid"?"side-menu--active":"")">
+                        <div class="side-menu__icon"> <i data-feather="box"></i> </div>
+                        <div class="side-menu__title">What We Did<i data-feather="chevron-down" class="side-menu__sub-icon"></i> </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a asp-area="admin" asp-controller="WhatWeDid" asp-action="index" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="users"></i> </div>
+                                <div class="side-menu__title">What We Did</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="admin" asp-controller="WeDidPart" asp-action="index" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                                <div class="side-menu__title">We Did Part</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a asp-area="Admin" asp-controller="Form" asp-action="Index" class="side-menu @(ViewBag.Active == "Form"?"side-menu--active":"")">
+                        <div class="side-menu__icon"> <i data-feather="users"></i> </div>
+                        <div class="side-menu__title"> Form </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- END: Side Menu -->
+        <!-- BEGIN: Content -->
+        <div class="content">
+            <!-- BEGIN: Top Bar -->
+            <div class="top-bar">
+                <!-- BEGIN: Breadcrumb -->
+                <div class="-intro-x breadcrumb mr-auto hidden sm:flex"> <a href="~/areas/admin/" class="">Application</a> <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="~/areas/admin/" class="breadcrumb--active">Dashboard</a> </div>
+                <!-- END: Breadcrumb -->
+               
+                <!-- BEGIN: Account Menu -->
+                <div class="intro-x dropdown w-8 h-8 relative">
+                    <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in">
+                        <img alt="Midone Tailwind HTML Admin Template" src="~/dist/areas/admin/dist2\images\profile-9.jpg">
+                    </div>
+                    <div class="dropdown-box mt-10 absolute w-56 top-0 right-0 z-20">
+                        <div class="dropdown-box__content box bg-theme-38 text-white">
+                            @if (signInManager.IsSignedIn(User))
+                            {
+                <div class="p-4 border-b border-theme-40">
+                    <div class="font-medium">@userManager.GetUserName(User)</div>
+                    <div class="text-xs text-theme-41">@roleManager.Roles.FirstOrDefault(r => r.Id == _context.UserRoles.FirstOrDefault(r => r.UserId == userManager.GetUserId(User)).RoleId).Name</div>
+                </div>}
+
+                            <div class="p-2">
+                                <a href="~/areas/admin/" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="user" class="w-4 h-4 mr-2"></i> Profile </a>
+                                <a href="~/areas/admin/" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="edit" class="w-4 h-4 mr-2"></i> Add Account </a>
+                                <a href="~/areas/admin/" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="lock" class="w-4 h-4 mr-2"></i> Reset Password </a>
+                                <a href="~/areas/admin/" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="help-circle" class="w-4 h-4 mr-2"></i> Help </a>
+                            </div>
+                            <div class="p-2 border-t border-theme-40">
+                                <a asp-area="Admin" asp-controller="Account" asp-action="Logout" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> Logout </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END: Account Menu -->
+            </div>
+            <!-- END: Top Bar -->
+
+            @RenderBody()
+
+
+        </div>
+        <!-- END: Content -->
+    </div>
+    <!-- BEGIN: JS Assets-->
+    @*<script src="https://cdn.ckeditor.com/ckeditor5/28.0.0/classic/ckeditor.js"></script>*@
+    <script src="https://cdn.ckeditor.com/4.16.1/full/ckeditor.js"></script>
+
+
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBG7gNHAhDzgYmq4-EHvM4bqW1DNj2UCuk&libraries=places"></script>
+    <script src="~/dist/areas/admin/dist2\js\app.js?v=1"></script>
+    <script src="~/dist/areas/admin/dist2/js/script1.js"></script>
+    <script src="~/dist/areas/admin/dist2/js/script2.js"></script>
+    <!-- END: JS Assets-->
+</body>
+</html>

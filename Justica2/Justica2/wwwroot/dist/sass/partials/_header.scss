@@ -1,0 +1,381 @@
+header{
+    .active{
+        color: rgb(255, 174, 0) !important;
+    }
+    #top-navbar{
+        background-size: cover;
+        // position: relative;
+        z-index: 1000;
+        width: 100%;
+        padding: 0 30px;
+        overflow: hidden;
+        top: 0;
+        background: #111111;
+        .container{
+            .row{
+                .left{                
+                    .social-three{
+                     display: flex;
+                                       
+                         padding: 0; 
+                         
+                       a{
+                           text-decoration: none;
+                           color: white;
+                           font-size: 14px;
+                           display: flex;
+                           padding: 5px;
+                           padding-left: 15px;
+                           display: inline-block;
+                           text-align: center;
+                           i{
+                             font-size: 16px;
+                             margin-top: 8px;
+                             margin-right: 10px;
+                             color: rgb(255, 174, 0);
+                           }
+                       } 
+                    }
+                    
+                 }
+                 .right{
+                     .navbar-widget{
+                         font-size: 13px;
+                         display: flex;
+                         padding: 8px 15px;
+                         font-weight: 400;
+                         height: 40px;
+                         font-family: "Jost";
+                         justify-content: flex-end;
+                         
+                           a{
+                               position: relative;
+                               top: 5px;
+                             text-decoration: none;
+                             color: rgb(255, 255, 255);
+                              margin-right: 15px;
+                           }
+                       } 
+                 }
+            }            
+        }
+        
+    }
+    .main-navbar{
+        padding-top: 10px;
+        padding-bottom: 10px;
+         background: rgba(0, 0, 0, 0.1);
+         position: fixed;
+         width: 100%; 
+         //overflow: hidden;
+         //z-index: 10000;       
+        .container{
+            background-size: cover;
+            .row{
+                .col-md-12{
+                    .content{
+                        display: flex;
+                        justify-content: space-between;
+                        .content-item{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;                           
+                        }
+                        .navbar-middle{
+                            #menu{
+                                font-family: "Jost";
+                                font-size: 13px;
+                                margin: 0 auto;
+                                float: none;
+                                text-transform: uppercase;
+                                li{
+                                    letter-spacing: 1px;
+                                    font-weight: 500;
+                                    margin: 0px 0px;
+                                    padding: 0px 0px;
+                                    float:left;
+                                    display: inline;
+                                    list-style: none;
+                                    position: relative;
+                                    transition: all 0.2s linear;
+                                    a{
+                                        position: relative;
+                                        display: inline-block;
+                                        padding: 30px 18px;
+                                        text-decoration: none;
+                                        color: rgb(255, 255, 255);
+                                        text-align: center;
+                                        outline: none;
+                                        transition: all 0.2s linear;
+                                        &:hover{
+                                            color: rgb(255, 174, 0);
+                                        }
+                                    }                                 
+                                    .down{
+                                        width: 210px;
+                                        height: auto;
+                                        position: absolute;
+                                        left: 0px;
+                                        z-index: 10;
+                                        visibility: hidden;
+                                        opacity: 0;  
+                                        box-shadow: 2px 2px 30px 0px rgba(20, 20, 20, 0.1);  
+                                        overflow: hidden; 
+                                        transition: all 0.3s linear;      
+                                        li{
+                                            font-size: 12px;
+                                            display: block;
+                                            float: none;
+                                            
+                                            a{
+                                                position: relative;
+                                                display: inline-block;
+                                                padding: 5px 15px;
+                                                text-decoration: none;
+                                                border-top: none;
+                                                color: #fcf7f7;
+                                                width: 100%;
+                                                border-left: none;
+                                                text-align: left;
+                                                font-weight: normal;
+                                                border-bottom: solid 1px rgba(255, 255, 255, 0.1); 
+                                                line-height: 25px;  
+                                                text-transform: none;
+                                                &:hover{
+                                                    color: white;
+                                                    background-color: rgb(255, 174, 0);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .navbar-hover{
+                                    &:hover .down{
+                                        visibility: visible; 
+                                        opacity: 1;
+                                 }
+                                } 
+                            }
+                        }
+                        .navbar-phone{
+                            .phone-content{
+                                position: relative;                               
+                                color: #ffffff;
+                                font-family: 'Jost';
+                                padding-left: 40px;
+                                
+                                padding-top: 20px;   
+                                #text{
+                                    display: inline-block;
+                                    position: absolute;
+                                    left: 40px;
+                                    top: 0;
+                                    font-size: 12px;
+                                    font-weight: 500;
+                                }
+                                i{
+                                    color: rgb(255, 174, 0);
+                                    font-size: 32px;
+                                    transform: rotateY(180deg);
+                                    display: inline-block;
+                                    position: absolute;
+                                    left: 0;
+                                    top: 4px;                                    
+                                }
+                                #number{
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sticky {
+        position: fixed;
+        z-index: 999999;
+        top: 0px;
+        width: 100%;
+        //overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.8);
+        transition: all 0.3s linear;
+        .down{
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+      }
+    #main-navbar-respon{
+        display: none;
+        overflow: hidden;
+        
+          .container{
+              background-size: cover;
+              position: relative;
+              padding-top: 10px;
+              transition: all 0.3s linear;
+              .row{
+                  .col-md-12{
+                     .content{
+                        display: flex;
+                        justify-content: space-between;
+                      
+                         .respon-menu{
+                             background-color: white;
+                             position: absolute;
+                             top: 90px;
+                             width: 100%;                             
+                             transition: all 0.3s linear;
+                             background-size: cover;
+                             overflow: hidden;
+                             display: flex;
+                            justify-content: center;
+                            align-items: center;
+                             #menu{
+                                font-family: "Jost";
+                                font-size: 13px;
+                                float: none;
+                                text-transform: uppercase;
+                                z-index: 200;
+                                width: 100%;
+                                margin: 0;
+                                padding: 0;
+                                text-align: left;
+                                padding-right: 30px;
+                                transition: all 0.3s linear;
+                                
+                                 .main-li{
+                                    border-bottom: solid 1px rgb(238, 238, 238);
+                                    margin: 0;
+                                    width: 100%;
+                                    display: block;
+                                    letter-spacing: 1px;
+                                    font-weight: 500;
+                                    position: relative;
+                                    
+                                     a{
+                                        color: rgb(136, 136, 136);
+                                        text-align: left;
+                                        padding-top: 10px;
+                                        padding-bottom: 10px;
+                                        position: relative;
+                                        display: inline-block;
+                                        width: 100%;
+                                        padding: 30px 18px;
+                                        text-decoration: none;    
+                                     }
+                                     #icon-span{
+                                        width: 36px;
+                                        height: 36px;
+                                        position: absolute;
+                                        right: 0;
+                                        margin-top: 30px;
+                                        z-index: 1000;
+                                        cursor: pointer;
+                                     }
+                                     #down{
+                                        
+                                        height: 0;
+                                        overflow: hidden;
+                                        position: relative;
+                                        left: 0;
+                                        transition: all 0.3s linear;
+                                         .second-li{
+                                            border-top: solid 1px #eee;
+                                            padding-left: 40px;
+                                         }
+                                     }
+                                 }
+                             }
+                         }
+                         .content-item{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center; 
+                            .icon-menu-tap{
+                                a{
+                                     float: right;
+                                     margin-top: 20px;
+                                     margin-bottom: 25px;                                     
+                                     padding: 4px;
+                                     text-align: center;
+                                     color: white;
+                                     background-color: rgb(255, 174, 0);
+                                     width: 32px;
+                                     height: 32px;  
+                                    i{                                        
+                                         position: relative;     
+                                         top: 5px;                                                                           
+                                         text-align: center;
+                                         background-color: rgb(255, 174, 0);
+                                         font-size: 16px;
+                                      
+                                    }
+                                }
+                            } 
+                         }
+                     }                     
+                  }
+              }
+          }
+          .responsive{             
+             opacity: 1;    
+             height: fit-content;     
+            
+            .main-li{
+                a{
+                   float: none;
+                   display: block;
+                   text-align: left;                   
+                }
+            }
+            
+        }
+        .responsive2{             
+            display: unset !important;
+           .main-li{
+               a{
+                  float: none;
+                  display: block;
+                  text-align: left;                   
+               }
+           }          
+       }
+    }
+}
+
+@media screen and(min-width:1200px){ 
+    .container{
+        width: 1200px;
+    }
+}
+@media screen and(max-width:767px){
+    .hidden-sm{
+        display: none;
+    }
+}
+
+@media screen and(max-width:992px){
+    .hidden-md{
+        display: none;
+    }
+    .main-navbar{
+        display: none;
+    }
+    .respon-menu{           
+        opacity: 0;
+        height: 0;
+    }
+    #main-navbar-respon{
+       display: unset !important;
+       
+   }
+
+}
+@media screen and(max-width:567px){
+    .respon-menu{
+        width: 95% !important;
+        
+    }
+        
+}

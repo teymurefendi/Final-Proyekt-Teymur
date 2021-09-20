@@ -1,0 +1,344 @@
+main{
+    #single-all{
+        padding: 90px 0 90px 0;
+    position: relative;
+        .container{
+            .row{
+                .col-md-8{
+                    .single-content{
+                        img{
+                            margin-bottom: 20px;
+                            width: 100%;
+                            height: auto;
+                        }
+                        .single-text{
+                            p{
+                                margin-bottom: 20px;
+                                font-family: "Jost";
+                                font-size: 16px;
+                                font-weight: 400;
+                                color: #606060;
+                                line-height: 28px;
+                            }
+                            blockquote{
+                                font-family: "Jost";
+                                font-size: 24px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: 32px;
+                                border: none;
+                                border-left: solid 3px #333333;
+                                padding-left: 30px;
+                                color: #111111;
+                                margin-bottom: 12px;
+                                border-color: rgb(255, 174, 0);
+                            }
+                            .news-date{
+                                margin-right: 20px;
+                                font-size: 13px;
+                                color: #999;
+                                font-family: "Jost";
+                                font-weight: 400;
+                                line-height: 28px;
+                            }
+                            .news-com{
+                                margin-right: 20px;
+                                font-size: 13px;
+                                color: #999;
+                                font-family: "Jost";
+                                font-weight: 400;
+                                line-height: 28px;
+                                i{
+                                    padding-right: 10px;
+                                    font-size: 11px;
+                                }
+                            }
+                            #news-like{
+                                margin-right: 20px;
+                                font-size: 13px;
+                                color: #999;
+                                font-family: "Jost";
+                                font-weight: 400;
+                                line-height: 28px;
+                                #urek{
+                                    padding-right: 10px;
+                                    font-size: 11px;
+                                }
+                                #like-count{
+                                font-size: 13px;
+                                color: #999;
+                                font-family: "Jost";
+                                font-weight: 400;
+                                line-height: 28px;
+                                }
+                            }
+                        }
+                    }
+                    #news-comment{
+                        margin-top: 70px;
+                        h4{
+                            font-size: 20px;
+                            margin-bottom: 25px;
+                            font-family: "Jost";
+                            font-weight: 600;
+                            color: #111111;
+                        }
+                        ol{
+                            margin-bottom: 42px;
+                            li{
+                                min-height: 70px;
+                                font-size: 14px;
+                                line-height: 26px;
+                                margin-bottom: 20px;
+                                padding-bottom: 20px;
+                                border-bottom: solid 1px #eee;
+                                //margin-right: -40px;
+                                .avatar{
+                                    position: absolute;
+                                    margin-top: 5px;                                    
+                                    img{
+                                        width: 70px;
+                                        height: auto;
+                                    }
+                                }
+                                .comment-info{
+                                    margin-left: 85px;
+                                    margin-bottom: 5px;
+                                    .c-name{
+                                        display: block;
+                                        font-weight: 700;
+                                        color: #555555;
+                                        font-size: 14px;
+                                        line-height: 26px;
+                                        font-family: "Jost";
+                                    }
+                                    .c-date{
+                                        font-size: 12px;
+                                        color: rgb(255, 174, 0);
+                                        line-height: 26px;
+                                    }
+                                    .c-reply{
+                                        padding-left: 20px;
+                                        margin-left: 20px;
+                                        border-left: solid 1px #ddd;
+                                        font-size: 12px;   
+                                        a{
+                                            color: rgb(255, 174, 0);
+                                            text-decoration: none;
+                                            font-family: "Jost";
+                                        }
+                                    }
+                                }
+                                .comment-cont{
+                                    margin-left: 85px;
+                                    font-weight: 400;
+                                    color: #606060;
+                                    font-family: "Jost";
+                                }
+                                ol{
+                                     margin-bottom: 0;
+                                     li{
+                                        margin-left: 55px;
+                                        padding-bottom: 0px;
+                                        margin-top: 20px;
+                                        padding-top: 10px;
+                                        border-top: solid 1px #eee;
+                                        border-bottom: none;
+                                     }
+                                }
+                            }
+                        }
+                        #comment-form{
+                             h4{
+                                font-size: 20px;
+                                margin-bottom: 25px;
+                                font-family: "Jost";
+                                font-weight: 600;
+                                color: #111111;   
+                             }
+                             .comment-form-cont{
+                                 #comment-form-main{
+                                     label{
+                                        display: inline-block;
+                                        margin-bottom: 6px;
+                                        font-family: "Jost", Helvetica, Arial, sans-serif;
+                                        font-size: 16px;
+                                        font-weight: 400;
+                                        color: #606060;
+                                        line-height: 28px;    
+                                     }
+                                     input{
+                                        padding: 10px;
+                                        margin-bottom: 20px;
+                                        background: rgba(255, 255, 255, 0.5);
+                                        border-radius: 3px;
+                                        font-weight: 400;
+                                        font-size: 18px;
+                                        line-height: 1.5;
+                                        color: #495057;
+                                        border: 1px solid #ced4da;
+                                        overflow: visible;
+                                        display: block;
+                                        width: 100%;
+                                        height: auto;
+                                     }
+                                     textarea{
+                                        padding: 10px;
+                                        height: 170px;
+                                        border-radius: 3px;
+                                        margin-bottom: 20px;
+                                        background: rgba(255, 255, 255, 0.5);
+                                        font-weight: 400;
+                                        font-size: 18px;
+                                        line-height: 1.5;
+                                        color: #495057;
+                                        border: 1px solid #ced4da;
+                                        width: 100%;
+                                        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+                                     }
+                                     #send-btn{
+                                         margin-bottom: 20px;
+                                         input{
+                                            font-weight: bold;
+                                            text-decoration: none;
+                                            padding: 11px 30px;
+                                            min-width: 120px;
+                                            text-transform: uppercase;
+                                            font-size: 12px;
+                                            letter-spacing: 2px;
+                                            border-radius: 3px;
+                                            color: white;
+                                            background-color: rgb(255, 174, 0);
+                                            display: inline-block;
+                                            line-height: 1.5;
+                                            font-family: "Jost";
+                                            width: 30px;
+                                            border: none;
+                                         }
+                                     }
+                                 }
+                             }
+                        }
+                    }
+                }
+                .col-md-4{
+                    padding-left: 30px;
+                     .widget-cont{
+                        margin-bottom: 30px;
+                        padding-bottom: 30px;
+                         h4{
+                            font-size: 18px;
+                            letter-spacing: normal;
+                            font-family: "Jost";
+                            font-weight: 600;
+                            color: #111111;
+                            margin-bottom: 5px;
+                         }
+                         .border-h4{
+                            background-color: rgb(255, 174, 0);
+                            height: 2px;
+                            width: 30px;
+                            margin: 0px 0 20px 0;
+                            display: block;
+                         }
+                     }
+                     .widget-post{
+                         ul{
+                             li{
+                                border-bottom: solid 1px #f2f2f2;
+                                padding-bottom: 8px;
+                                margin-bottom: 8px;
+                                 span{
+                                    color: #fff;
+                                    display: inline-block;
+                                    padding: 0px 5px 0px 5px;
+                                    font-size: 12px;
+                                    text-align: left;
+                                    background-color: rgb(255, 174, 0);
+                                 }
+                                 a{
+                                    padding-left: 20px;
+                                    display: inline-block;
+                                    text-decoration: none;
+                                    color: #111111;
+                                 }
+                             }
+                         }
+                     }
+                     .widget-text{
+                         p{
+                            font-family: "Jost";
+                            font-size: 16px;
+                            font-weight: 400;
+                            color: #606060;
+                            line-height: 28px;
+                         }
+                     }
+                     .widget-tags{
+                         ul{
+                             margin-top: 30px;
+                             li{
+                                text-shadow: none;
+                                display: inline-block;
+                                margin-right: 3px;
+                                margin-bottom: 16px;
+                                 a{
+                                    background-color: rgb(255, 174, 0);
+                                    font-size: 12px;
+                                    text-decoration: none;
+                                    margin-bottom: 5px;
+                                    color: #fff;
+                                    padding: 7px 10px 7px 10px;
+                                    border-radius: 3px;
+                                 }
+                             }
+                         }
+                     }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and(max-width:575px) {
+    .widget-post{
+        ul{
+            li{
+               border-bottom: solid 1px #f2f2f2;
+               padding-bottom: 8px;
+               margin-bottom: 8px;
+                span{
+                   padding: 0px 5px 0px 2px !important;
+                   font-size: 10px !important;
+                }
+                a{
+                    font-size: 11px !important;
+                   padding-left: 3px !important;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and(min-width:767px) and(max-width:1200px){
+    .widget-post{
+        ul{
+            li{
+               border-bottom: solid 1px #f2f2f2;
+               padding-bottom: 8px;
+               margin-bottom: 8px;
+                span{
+                   padding: 0px 5px 0px 2px !important;
+                   font-size: 9px !important;
+                }
+                a{
+                    font-size: 10px !important;
+                   padding-left: 3px !important;
+                }
+            }
+        }
+    }
+}
+

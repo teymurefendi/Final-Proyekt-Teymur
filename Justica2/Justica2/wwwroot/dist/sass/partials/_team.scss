@@ -1,0 +1,113 @@
+main{
+    .member{
+        padding: 90px 0 90px 0;
+        position: relative;
+        background-color: rgb(17, 17, 17);
+        background-size: cover;
+        .team-member{
+            overflow: hidden;
+
+            .container{
+                //position: relative;
+                .row{
+                    align-items: center;
+                    .col-md-5{
+                        span{
+                            color: rgb(255, 174, 0);
+                            font-size: 12px;
+                            margin-bottom: 20px;
+                            font-weight: bold;
+                            letter-spacing: 2px;
+                            line-height: 10px;
+                            text-transform: uppercase;
+                            display: inline-block;
+                            font-family: "Jost";
+                        }
+                        h2{
+                            color: white;
+                            margin-bottom: 10px;
+                            font-size: 36px;
+                            line-height: 42px;
+                            letter-spacing: -1px;
+                            display: inline-block;
+                            position: relative;
+                            font-family: "Jost";
+                            font-weight: 600;
+                        }
+                        p{
+                            margin-bottom: 20px;
+                            color: white;
+                            font-family: "Jost";
+                            font-size: 15px;
+                            font-weight: 400;
+                            line-height: 28px;
+                        }
+                        .cust-social{
+                            a{
+                                i{
+                                    font-size: 16px;
+                                    opacity: .5;
+                                    text-shadow: none;
+                                    color: #fff;
+                                    padding: 12px 10px 8px 10px;
+                                    width: 34px;
+                                    height: 34px;
+                                    text-align: center;
+                                    transition: all 0.3s linear;
+                                }
+                                &:hover{
+                                    i{
+                                        color: rgb(255, 174, 0);
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+                .cust-img-cont{
+                    height: 100%;
+                    overflow: hidden;
+                    position: absolute;
+                    padding: 0;
+                    margin: 0;
+                    }
+            
+        }
+        .team-member1{
+                .cust-img-cont{
+                    background: url(/dist/img/t1.jpg);
+                    background-repeat: no-repeat;
+                    background-position-y:top;
+                    background-position-x: center;
+                    background-size: cover;
+                    top: 0;
+                    right: 0;
+                }         
+        }
+        .team-member2{
+                .cust-img-cont{
+                    background: url(/dist/img/t2.jpg);
+                    background-repeat: no-repeat;
+                    background-position-y:top;
+                    background-position-x: center;
+                    background-size: cover;
+                    top: 0;
+                    left: 0;
+                }                       
+        }
+        .team-member3{
+                .cust-img-cont{
+                    background: url(/dist/img/t3.jpg);  
+                    background-repeat: no-repeat;
+                    background-position-y:top;
+                    background-position-x: center;
+                    background-size: cover;
+                    top: 0;
+                    right: 0;
+                }               
+        }
+    }
+}
+

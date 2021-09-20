@@ -1,0 +1,68 @@
+﻿@model List<Team>
+@{
+    ViewData["Title"] = "Index";
+}
+
+@await Component.InvokeAsync("VcSubheader", new { PageName = "Team" })
+
+@{ int y = 1;}
+@foreach (var item in Model)
+{
+    if (y % 2 == 1)
+    {
+        <section class="member">
+            <div class="team-member team-member@(y)">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <span>@item.Position.Name</span><br>
+                            <h2>
+                                @item.Name
+                            </h2>
+                            <p>@item.About</p>
+                            <div class="cust-social">
+                                @foreach (var item2 in item.TeamToSocials)
+                                {
+                                    <a href="@item2.Link"><i class="@item2.TeamSocial.Icon"></i></a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cust-img-cont col-md-6 right">
+                </div>
+            </div>
+        </section>
+    }
+    else
+    {
+        <section class="member">
+            <div class="team-member team-member@(y)">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5 offset-md-7">
+                            <span>@item.Position.Name</span><br>
+                            <h2>
+                                @item.Name
+                            </h2>
+                            <p>@item.About</p>
+                            <div class="cust-social">
+                                @foreach (var item2 in item.TeamToSocials)
+                                {
+                                    <a href="@item2.Link"><i class="@item2.TeamSocial.Icon"></i></a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cust-img-cont col-md-6 right">
+                </div>
+            </div>
+        </section>
+    }
+    y++;
+}
+
+
+
+
